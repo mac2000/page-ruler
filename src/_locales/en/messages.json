@@ -5,6 +5,11 @@
 		"description": "Extension name"
 	},
 
+	"extShortName": {
+		"message": "Page Ruler",
+		"description": "Extension short name (maximum 12 characters)"
+	},
+
 	"extDescription": {
 		"message": "Draw a ruler to get pixel dimensions and positioning, and measure elements on any web page.",
 		"description": "Extension description"
