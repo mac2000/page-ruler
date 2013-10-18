@@ -1,0 +1,406 @@
+/* line 21, content.scss */
+*[id^=page-ruler] {
+  cursor: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  outline: 0 !important;
+  vertical-align: baseline !important;
+  font: normal normal normal 12px "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  position: relative !important;
+  display: inline !important;
+  color: #000000 !important;
+  border: none !important;
+  -webkit-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+}
+
+/* line 35, content.scss */
+*[id^=page-ruler-] {
+  width: auto !important;
+}
+
+/* line 39, content.scss */
+div[id^=page-ruler], p[id^=page-ruler], h1[id^=page-ruler], h2[id^=page-ruler], h3[id^=page-ruler], h4[id^=page-ruler], h5[id^=page-ruler] {
+  display: block !important;
+}
+
+/* line 46, content.scss */
+#page-ruler-toolbar {
+  z-index: 2000005 !important;
+  position: fixed !important;
+  top: 0px !important;
+  left: 0px !important;
+  width: 100% !important;
+  height: 30px !important;
+  background-color: #3f79c2 !important;
+  cursor: default !important;
+}
+/* line 57, content.scss */
+#page-ruler-toolbar label {
+  margin-left: 10px !important;
+  font-weight: bold !important;
+  padding-right: 5px !important;
+  cursor: default !important;
+  color: #ffffff !important;
+}
+/* line 65, content.scss */
+#page-ruler-toolbar input[type=number] {
+  padding: 3px 17px 3px 3px !important;
+  width: 80px !important;
+  text-align: right !important;
+}
+/* line 71, content.scss */
+#page-ruler-toolbar input[type=color] {
+  width: 40px !important;
+  height: 20px !important;
+  -webkit-border-radius: 2px !important;
+  border-radius: 2px !important;
+  border: 1px solid #777777 !important;
+}
+/* line 78, content.scss */
+#page-ruler-toolbar .container {
+  display: inline-block !important;
+  padding-top: 5px !important;
+}
+/* line 83, content.scss */
+#page-ruler-toolbar .close-container {
+  float: right !important;
+  padding: 5px !important;
+}
+/* line 86, content.scss */
+#page-ruler-toolbar .close-container img {
+  cursor: pointer !important;
+}
+/* line 91, content.scss */
+#page-ruler-toolbar .px-container {
+  display: inline !important;
+  position: relative !important;
+}
+/* line 94, content.scss */
+#page-ruler-toolbar .px-container:after {
+  content: 'px' !important;
+  position: absolute !important;
+  right: 20px !important;
+  top: 0px !important;
+  color: #aaaaaa !important;
+  -webkit-user-select: none !important;
+  user-select: none !important;
+}
+/* line 104, content.scss */
+#page-ruler-toolbar .element-toggle-container {
+  float: left !important;
+  height: 30px !important;
+  line-height: 30px !important;
+  background-color: #dae5f3 !important;
+  padding-top: 2px !important;
+  cursor: pointer !important;
+}
+/* line 111, content.scss */
+#page-ruler-toolbar .element-toggle-container span {
+  cursor: pointer !important;
+  padding-left: 5px !important;
+}
+/* line 115, content.scss */
+#page-ruler-toolbar .element-toggle-container img {
+  padding: 0px 5px !important;
+  top: 4px !important;
+  cursor: pointer !important;
+}
+/* line 122, content.scss */
+#page-ruler-toolbar #page-ruler-toolbar-container {
+  height: 30px !important;
+  display: table-cell !important;
+  vertical-align: middle !important;
+  margin-top: inherit !important;
+  width: 100% !important;
+  float: left !important;
+}
+
+/* line 135, content.scss */
+#page-ruler-element-toolbar {
+  background-color: #dae5f3 !important;
+  height: 30px !important;
+  line-height: 30px !important;
+  vertical-align: middle !important;
+  float: left !important;
+  width: 100% !important;
+  display: none !important;
+}
+/* line 144, content.scss */
+#page-ruler-element-toolbar label {
+  color: #000000 !important;
+}
+/* line 148, content.scss */
+#page-ruler-element-toolbar span {
+  font-weight: bold !important;
+}
+/* line 150, content.scss */
+#page-ruler-element-toolbar span.tag {
+  color: #00970C !important;
+}
+/* line 153, content.scss */
+#page-ruler-element-toolbar span.id {
+  color: #B12C9D !important;
+}
+/* line 156, content.scss */
+#page-ruler-element-toolbar span.cls {
+  color: #994500 !important;
+}
+/* line 161, content.scss */
+#page-ruler-element-toolbar .help-container {
+  padding-left: 20px !important;
+  background: transparent url("images/help.png") no-repeat left center !important;
+  margin-left: 10px !important;
+  flex: 1 !important;
+  padding-top: 8px !important;
+}
+/* line 169, content.scss */
+#page-ruler-element-toolbar .nav-container {
+  padding-left: 10px !important;
+  cursor: pointer !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+}
+/* line 174, content.scss */
+#page-ruler-element-toolbar .nav-container * {
+  cursor: pointer !important;
+}
+/* line 177, content.scss */
+#page-ruler-element-toolbar .nav-container span {
+  font-size: 11px !important;
+}
+/* line 180, content.scss */
+#page-ruler-element-toolbar .nav-container img {
+  top: 3px !important;
+  padding-right: 2px !important;
+}
+/* line 184, content.scss */
+#page-ruler-element-toolbar .nav-container > div {
+  display: inline-block !important;
+}
+/* line 189, content.scss */
+#page-ruler-element-toolbar #page-ruler-element-toolbar-element {
+  padding-left: 10px !important;
+  padding-top: 3px !important;
+}
+/* line 192, content.scss */
+#page-ruler-element-toolbar #page-ruler-element-toolbar-element span {
+  font-size: 13px !important;
+}
+/* line 197, content.scss */
+#page-ruler-element-toolbar #page-ruler-element-toolbar-navigate-container {
+  padding-left: 10px !important;
+  flex: 1 !important;
+  display: flex !important;
+}
+/* line 203, content.scss */
+#page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-container {
+  float: right !important;
+  padding-top: 2px !important;
+}
+/* line 206, content.scss */
+#page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-container > label {
+  top: -8px !important;
+}
+/* line 211, content.scss */
+#page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle {
+  position: relative !important;
+  width: 70px !important;
+  display: inline-block !important;
+  -webkit-user-select: none !important;
+  user-select: none !important;
+}
+/* line 216, content.scss */
+#page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle input {
+  display: none !important;
+}
+/* line 221, content.scss */
+#page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle input:checked + label .inner {
+  margin-left: 0 !important;
+}
+/* line 224, content.scss */
+#page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle input:checked + label .switch {
+  right: 0px !important;
+}
+/* line 231, content.scss */
+#page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label {
+  display: block !important;
+  overflow: hidden !important;
+  cursor: pointer !important;
+  border: 2px solid #999999 !important;
+  border-radius: 20px !important;
+  padding-right: 0px !important;
+  margin-left: 0px !important;
+  height: 26px !important;
+}
+/* line 241, content.scss */
+#page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label .inner, #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label .switch {
+  cursor: pointer !important;
+}
+/* line 245, content.scss */
+#page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label .inner {
+  width: 200% !important;
+  margin-left: -100% !important;
+  -webkit-transition: margin 0.3s ease-in;
+  -webkit-transition-delay: 0s;
+  transition: margin 0.3s ease-in 0s !important;
+}
+/* line 249, content.scss */
+#page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label .inner:after, #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label .inner:before {
+  float: left !important;
+  width: 50% !important;
+  height: 30px !important;
+  padding: 0px !important;
+  line-height: 24px !important;
+  font-size: 12px !important;
+  color: #ffffff !important;
+  font-family: Trebuchet, Arial, sans-serif !important;
+  font-weight: bold !important;
+  -webkit-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+}
+/* line 261, content.scss */
+#page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label .inner:before {
+  content: "__MSG_elementToolbarToggleOn__" !important;
+  text-transform: uppercase !important;
+  padding-left: 10px !important;
+  background-color: #3f79c2 !important;
+  color: #ffffff !important;
+}
+/* line 268, content.scss */
+#page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label .inner:after {
+  content: "__MSG_elementToolbarToggleOff__" !important;
+  text-transform: uppercase !important;
+  padding-right: 10px !important;
+  background-color: #eeeeee !important;
+  color: #999999 !important;
+  text-align: right !important;
+}
+/* line 278, content.scss */
+#page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label .switch {
+  width: 16px !important;
+  margin: 3px !important;
+  background: #ffffff !important;
+  border: 2px solid #999999 !important;
+  -webkit-border-radius: 20px !important;
+  border-radius: 20px !important;
+  position: absolute !important;
+  top: 0px !important;
+  bottom: 0px !important;
+  right: 40px !important;
+  -webkit-transition: all 0.3s ease-in;
+  -webkit-transition-delay: 0s;
+  transition: all 0.3s ease-in 0s !important;
+}
+
+/* line 298, content.scss */
+#page-ruler-mask {
+  width: 100% !important;
+  height: 100% !important;
+  position: fixed !important;
+  top: 0px !important;
+  left: 0px !important;
+  z-index: 2000004 !important;
+  cursor: crosshair !important;
+}
+
+/* line 309, content.scss */
+#page-ruler {
+  position: absolute !important;
+  z-index: 2000005 !important;
+  border-width: 1px !important;
+  border-style: dashed !important;
+}
+/* line 315, content.scss */
+#page-ruler .container {
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+  cursor: move !important;
+  overflow: hidden !important;
+}
+/* line 322, content.scss */
+#page-ruler .container .corner {
+  position: absolute !important;
+  width: 16px !important;
+  height: 16px !important;
+  border-width: 1px !important;
+  border-style: dashed !important;
+}
+/* line 330, content.scss */
+#page-ruler .container .edge {
+  position: absolute !important;
+}
+/* line 334, content.scss */
+#page-ruler .container .top {
+  top: 0px !important;
+  left: 0px !important;
+  height: 8px !important;
+  width: 100% !important;
+  cursor: n-resize !important;
+}
+/* line 342, content.scss */
+#page-ruler .container .bottom {
+  bottom: 0px !important;
+  left: 0px !important;
+  height: 8px !important;
+  width: 100% !important;
+  cursor: n-resize !important;
+}
+/* line 350, content.scss */
+#page-ruler .container .left {
+  top: 0px !important;
+  left: 0px !important;
+  height: 100% !important;
+  width: 8px !important;
+  cursor: w-resize !important;
+}
+/* line 358, content.scss */
+#page-ruler .container .right {
+  top: 0px !important;
+  right: 0px !important;
+  height: 100% !important;
+  width: 8px !important;
+  cursor: w-resize !important;
+}
+/* line 366, content.scss */
+#page-ruler .container .top-left {
+  top: 0px !important;
+  left: 0px !important;
+  border-left: none !important;
+  border-top: none !important;
+  cursor: nw-resize !important;
+}
+/* line 374, content.scss */
+#page-ruler .container .top-right {
+  top: 0px !important;
+  right: 0px !important;
+  border-right: none !important;
+  border-top: none !important;
+  cursor: ne-resize !important;
+}
+/* line 382, content.scss */
+#page-ruler .container .bottom-left {
+  bottom: 0px !important;
+  left: 0px !important;
+  border-left: none !important;
+  border-bottom: none !important;
+  cursor: sw-resize !important;
+}
+/* line 390, content.scss */
+#page-ruler .container .bottom-right {
+  bottom: 0px !important;
+  right: 0px !important;
+  border-right: none !important;
+  border-bottom: none !important;
+  cursor: se-resize !important;
+}
+/* line 401, content.scss */
+#page-ruler.tracking .container {
+  cursor: pointer !important;
+}
+/* line 403, content.scss */
+#page-ruler.tracking .container .edge, #page-ruler.tracking .container .corner {
+  cursor: pointer !important;
+}
