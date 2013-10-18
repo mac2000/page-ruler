@@ -27,3 +27,9 @@ echo "compiling background.js"
 find src/js/background/ -name "*.js" | xargs java -jar deps/compiler.jar --js_output_file build/background.js --compilation_level WHITESPACE_ONLY --js
 
 rm -rf build/js
+
+if [ $1 = "zip" ]
+then
+    echo "zipping package"
+    zip -r pageruler.zip build
+fi
