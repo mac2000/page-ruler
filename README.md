@@ -6,7 +6,7 @@ draw a ruler to get pixel dimensions and positioning, and measure elements on an
 
 ### [Install the addon here from the Chrome Web Store](https://chrome.google.com/webstore/detail/page-ruler/jlpkojjdgbllmedoapgfodplfhcbnbpn)
 
-Please use the [issue tracker](/issues) to report any bugs or make suggestions
+Please use the [issue tracker](https://github.com/wrakky/page-ruler/issues) to report any bugs or make suggestions
 
 ## Contribute
 
