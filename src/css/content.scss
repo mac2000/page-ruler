@@ -40,6 +40,14 @@ div, p, h1, h2, h3, h4, h5 {
 		display: block !important;
 	}
 }
+input {
+	&[id^=page-ruler] {
+		@include appearance(textfield !important);
+		&[type=checkbox] {
+			@include appearance(checkbox !important);
+		}
+	}
+}
 
 // toolbar
 
@@ -233,7 +241,7 @@ div, p, h1, h2, h3, h4, h5 {
 			overflow:		hidden !important;
 			cursor:			pointer !important;
 			border:			2px solid #999999 !important;
-			border-radius:	20px !important;
+			@include		border-radius(20px !important);
 			padding-right:	0px !important;
 			margin-left:	0px !important;
 			height:			26px !important;

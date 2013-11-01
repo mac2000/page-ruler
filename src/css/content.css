@@ -25,7 +25,18 @@ div[id^=page-ruler], p[id^=page-ruler], h1[id^=page-ruler], h2[id^=page-ruler], 
   display: block !important;
 }
 
+/* line 44, content.scss */
+input[id^=page-ruler] {
+  -webkit-appearance: textfield !important;
+  appearance: textfield !important;
+}
 /* line 46, content.scss */
+input[id^=page-ruler][type=checkbox] {
+  -webkit-appearance: checkbox !important;
+  appearance: checkbox !important;
+}
+
+/* line 54, content.scss */
 #page-ruler-toolbar {
   z-index: 2000005 !important;
   position: fixed !important;
@@ -36,7 +47,7 @@ div[id^=page-ruler], p[id^=page-ruler], h1[id^=page-ruler], h2[id^=page-ruler], 
   background-color: #3f79c2 !important;
   cursor: default !important;
 }
-/* line 57, content.scss */
+/* line 65, content.scss */
 #page-ruler-toolbar label {
   margin-left: 10px !important;
   font-weight: bold !important;
@@ -44,13 +55,13 @@ div[id^=page-ruler], p[id^=page-ruler], h1[id^=page-ruler], h2[id^=page-ruler], 
   cursor: default !important;
   color: #ffffff !important;
 }
-/* line 65, content.scss */
+/* line 73, content.scss */
 #page-ruler-toolbar input[type=number] {
   padding: 3px 17px 3px 3px !important;
   width: 80px !important;
   text-align: right !important;
 }
-/* line 71, content.scss */
+/* line 79, content.scss */
 #page-ruler-toolbar input[type=color] {
   width: 40px !important;
   height: 20px !important;
@@ -58,26 +69,26 @@ div[id^=page-ruler], p[id^=page-ruler], h1[id^=page-ruler], h2[id^=page-ruler], 
   border-radius: 2px !important;
   border: 1px solid #777777 !important;
 }
-/* line 78, content.scss */
+/* line 86, content.scss */
 #page-ruler-toolbar .container {
   display: inline-block !important;
   padding-top: 5px !important;
 }
-/* line 83, content.scss */
+/* line 91, content.scss */
 #page-ruler-toolbar .close-container {
   float: right !important;
   padding: 5px !important;
 }
-/* line 86, content.scss */
+/* line 94, content.scss */
 #page-ruler-toolbar .close-container img {
   cursor: pointer !important;
 }
-/* line 91, content.scss */
+/* line 99, content.scss */
 #page-ruler-toolbar .px-container {
   display: inline !important;
   position: relative !important;
 }
-/* line 94, content.scss */
+/* line 102, content.scss */
 #page-ruler-toolbar .px-container:after {
   content: 'px' !important;
   position: absolute !important;
@@ -87,7 +98,7 @@ div[id^=page-ruler], p[id^=page-ruler], h1[id^=page-ruler], h2[id^=page-ruler], 
   -webkit-user-select: none !important;
   user-select: none !important;
 }
-/* line 104, content.scss */
+/* line 112, content.scss */
 #page-ruler-toolbar .element-toggle-container {
   float: left !important;
   height: 30px !important;
@@ -96,18 +107,18 @@ div[id^=page-ruler], p[id^=page-ruler], h1[id^=page-ruler], h2[id^=page-ruler], 
   padding-top: 2px !important;
   cursor: pointer !important;
 }
-/* line 111, content.scss */
+/* line 119, content.scss */
 #page-ruler-toolbar .element-toggle-container span {
   cursor: pointer !important;
   padding-left: 5px !important;
 }
-/* line 115, content.scss */
+/* line 123, content.scss */
 #page-ruler-toolbar .element-toggle-container img {
   padding: 0px 5px !important;
   top: 4px !important;
   cursor: pointer !important;
 }
-/* line 122, content.scss */
+/* line 130, content.scss */
 #page-ruler-toolbar #page-ruler-toolbar-container {
   height: 30px !important;
   display: table-cell !important;
@@ -117,7 +128,7 @@ div[id^=page-ruler], p[id^=page-ruler], h1[id^=page-ruler], h2[id^=page-ruler], 
   float: left !important;
 }
 
-/* line 135, content.scss */
+/* line 143, content.scss */
 #page-ruler-element-toolbar {
   background-color: #dae5f3 !important;
   height: 30px !important;
@@ -127,27 +138,27 @@ div[id^=page-ruler], p[id^=page-ruler], h1[id^=page-ruler], h2[id^=page-ruler], 
   width: 100% !important;
   display: none !important;
 }
-/* line 144, content.scss */
+/* line 152, content.scss */
 #page-ruler-element-toolbar label {
   color: #000000 !important;
 }
-/* line 148, content.scss */
+/* line 156, content.scss */
 #page-ruler-element-toolbar span {
   font-weight: bold !important;
 }
-/* line 150, content.scss */
+/* line 158, content.scss */
 #page-ruler-element-toolbar span.tag {
   color: #00970C !important;
 }
-/* line 153, content.scss */
+/* line 161, content.scss */
 #page-ruler-element-toolbar span.id {
   color: #B12C9D !important;
 }
-/* line 156, content.scss */
+/* line 164, content.scss */
 #page-ruler-element-toolbar span.cls {
   color: #994500 !important;
 }
-/* line 161, content.scss */
+/* line 169, content.scss */
 #page-ruler-element-toolbar .help-container {
   padding-left: 20px !important;
   background: transparent url("images/help.png") no-repeat left center !important;
@@ -155,55 +166,55 @@ div[id^=page-ruler], p[id^=page-ruler], h1[id^=page-ruler], h2[id^=page-ruler], 
   flex: 1 !important;
   padding-top: 8px !important;
 }
-/* line 169, content.scss */
+/* line 177, content.scss */
 #page-ruler-element-toolbar .nav-container {
   padding-left: 10px !important;
   cursor: pointer !important;
   overflow: hidden !important;
   white-space: nowrap !important;
 }
-/* line 174, content.scss */
+/* line 182, content.scss */
 #page-ruler-element-toolbar .nav-container * {
   cursor: pointer !important;
 }
-/* line 177, content.scss */
+/* line 185, content.scss */
 #page-ruler-element-toolbar .nav-container span {
   font-size: 11px !important;
 }
-/* line 180, content.scss */
+/* line 188, content.scss */
 #page-ruler-element-toolbar .nav-container img {
   top: 3px !important;
   padding-right: 2px !important;
 }
-/* line 184, content.scss */
+/* line 192, content.scss */
 #page-ruler-element-toolbar .nav-container > div {
   display: inline-block !important;
 }
-/* line 189, content.scss */
+/* line 197, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-element {
   padding-left: 10px !important;
   padding-top: 3px !important;
 }
-/* line 192, content.scss */
+/* line 200, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-element span {
   font-size: 13px !important;
 }
-/* line 197, content.scss */
+/* line 205, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-navigate-container {
   padding-left: 10px !important;
   flex: 1 !important;
   display: flex !important;
 }
-/* line 203, content.scss */
+/* line 211, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-container {
   float: right !important;
   padding-top: 2px !important;
 }
-/* line 206, content.scss */
+/* line 214, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-container > label {
   top: -8px !important;
 }
-/* line 211, content.scss */
+/* line 219, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle {
   position: relative !important;
   width: 70px !important;
@@ -211,34 +222,35 @@ div[id^=page-ruler], p[id^=page-ruler], h1[id^=page-ruler], h2[id^=page-ruler], 
   -webkit-user-select: none !important;
   user-select: none !important;
 }
-/* line 216, content.scss */
+/* line 224, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle input {
   display: none !important;
 }
-/* line 221, content.scss */
+/* line 229, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle input:checked + label .inner {
   margin-left: 0 !important;
 }
-/* line 224, content.scss */
+/* line 232, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle input:checked + label .switch {
   right: 0px !important;
 }
-/* line 231, content.scss */
+/* line 239, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label {
   display: block !important;
   overflow: hidden !important;
   cursor: pointer !important;
   border: 2px solid #999999 !important;
+  -webkit-border-radius: 20px !important;
   border-radius: 20px !important;
   padding-right: 0px !important;
   margin-left: 0px !important;
   height: 26px !important;
 }
-/* line 241, content.scss */
+/* line 249, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label .inner, #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label .switch {
   cursor: pointer !important;
 }
-/* line 245, content.scss */
+/* line 253, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label .inner {
   width: 200% !important;
   margin-left: -100% !important;
@@ -246,7 +258,7 @@ div[id^=page-ruler], p[id^=page-ruler], h1[id^=page-ruler], h2[id^=page-ruler], 
   -webkit-transition-delay: 0s;
   transition: margin 0.3s ease-in 0s !important;
 }
-/* line 249, content.scss */
+/* line 257, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label .inner:after, #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label .inner:before {
   float: left !important;
   width: 50% !important;
@@ -260,7 +272,7 @@ div[id^=page-ruler], p[id^=page-ruler], h1[id^=page-ruler], h2[id^=page-ruler], 
   -webkit-box-sizing: border-box !important;
   box-sizing: border-box !important;
 }
-/* line 261, content.scss */
+/* line 269, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label .inner:before {
   content: "__MSG_elementToolbarToggleOn__" !important;
   text-transform: uppercase !important;
@@ -268,7 +280,7 @@ div[id^=page-ruler], p[id^=page-ruler], h1[id^=page-ruler], h2[id^=page-ruler], 
   background-color: #3f79c2 !important;
   color: #ffffff !important;
 }
-/* line 268, content.scss */
+/* line 276, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label .inner:after {
   content: "__MSG_elementToolbarToggleOff__" !important;
   text-transform: uppercase !important;
@@ -277,7 +289,7 @@ div[id^=page-ruler], p[id^=page-ruler], h1[id^=page-ruler], h2[id^=page-ruler], 
   color: #999999 !important;
   text-align: right !important;
 }
-/* line 278, content.scss */
+/* line 286, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label .switch {
   width: 16px !important;
   margin: 3px !important;
@@ -294,7 +306,7 @@ div[id^=page-ruler], p[id^=page-ruler], h1[id^=page-ruler], h2[id^=page-ruler], 
   transition: all 0.3s ease-in 0s !important;
 }
 
-/* line 298, content.scss */
+/* line 306, content.scss */
 #page-ruler-mask {
   width: 100% !important;
   height: 100% !important;
@@ -305,14 +317,14 @@ div[id^=page-ruler], p[id^=page-ruler], h1[id^=page-ruler], h2[id^=page-ruler], 
   cursor: crosshair !important;
 }
 
-/* line 309, content.scss */
+/* line 317, content.scss */
 #page-ruler {
   position: absolute !important;
   z-index: 2000005 !important;
   border-width: 1px !important;
   border-style: dashed !important;
 }
-/* line 315, content.scss */
+/* line 323, content.scss */
 #page-ruler .container {
   position: relative !important;
   width: 100% !important;
@@ -320,7 +332,7 @@ div[id^=page-ruler], p[id^=page-ruler], h1[id^=page-ruler], h2[id^=page-ruler], 
   cursor: move !important;
   overflow: hidden !important;
 }
-/* line 322, content.scss */
+/* line 330, content.scss */
 #page-ruler .container .corner {
   position: absolute !important;
   width: 16px !important;
@@ -328,11 +340,11 @@ div[id^=page-ruler], p[id^=page-ruler], h1[id^=page-ruler], h2[id^=page-ruler], 
   border-width: 1px !important;
   border-style: dashed !important;
 }
-/* line 330, content.scss */
+/* line 338, content.scss */
 #page-ruler .container .edge {
   position: absolute !important;
 }
-/* line 334, content.scss */
+/* line 342, content.scss */
 #page-ruler .container .top {
   top: 0px !important;
   left: 0px !important;
@@ -340,7 +352,7 @@ div[id^=page-ruler], p[id^=page-ruler], h1[id^=page-ruler], h2[id^=page-ruler], 
   width: 100% !important;
   cursor: n-resize !important;
 }
-/* line 342, content.scss */
+/* line 350, content.scss */
 #page-ruler .container .bottom {
   bottom: 0px !important;
   left: 0px !important;
@@ -348,7 +360,7 @@ div[id^=page-ruler], p[id^=page-ruler], h1[id^=page-ruler], h2[id^=page-ruler], 
   width: 100% !important;
   cursor: n-resize !important;
 }
-/* line 350, content.scss */
+/* line 358, content.scss */
 #page-ruler .container .left {
   top: 0px !important;
   left: 0px !important;
@@ -356,7 +368,7 @@ div[id^=page-ruler], p[id^=page-ruler], h1[id^=page-ruler], h2[id^=page-ruler], 
   width: 8px !important;
   cursor: w-resize !important;
 }
-/* line 358, content.scss */
+/* line 366, content.scss */
 #page-ruler .container .right {
   top: 0px !important;
   right: 0px !important;
@@ -364,7 +376,7 @@ div[id^=page-ruler], p[id^=page-ruler], h1[id^=page-ruler], h2[id^=page-ruler], 
   width: 8px !important;
   cursor: w-resize !important;
 }
-/* line 366, content.scss */
+/* line 374, content.scss */
 #page-ruler .container .top-left {
   top: 0px !important;
   left: 0px !important;
@@ -372,7 +384,7 @@ div[id^=page-ruler], p[id^=page-ruler], h1[id^=page-ruler], h2[id^=page-ruler], 
   border-top: none !important;
   cursor: nw-resize !important;
 }
-/* line 374, content.scss */
+/* line 382, content.scss */
 #page-ruler .container .top-right {
   top: 0px !important;
   right: 0px !important;
@@ -380,7 +392,7 @@ div[id^=page-ruler], p[id^=page-ruler], h1[id^=page-ruler], h2[id^=page-ruler], 
   border-top: none !important;
   cursor: ne-resize !important;
 }
-/* line 382, content.scss */
+/* line 390, content.scss */
 #page-ruler .container .bottom-left {
   bottom: 0px !important;
   left: 0px !important;
@@ -388,7 +400,7 @@ div[id^=page-ruler], p[id^=page-ruler], h1[id^=page-ruler], h2[id^=page-ruler], 
   border-bottom: none !important;
   cursor: sw-resize !important;
 }
-/* line 390, content.scss */
+/* line 398, content.scss */
 #page-ruler .container .bottom-right {
   bottom: 0px !important;
   right: 0px !important;
@@ -396,11 +408,11 @@ div[id^=page-ruler], p[id^=page-ruler], h1[id^=page-ruler], h2[id^=page-ruler], 
   border-bottom: none !important;
   cursor: se-resize !important;
 }
-/* line 401, content.scss */
+/* line 409, content.scss */
 #page-ruler.tracking .container {
   cursor: pointer !important;
 }
-/* line 403, content.scss */
+/* line 411, content.scss */
 #page-ruler.tracking .container .edge, #page-ruler.tracking .container .corner {
   cursor: pointer !important;
 }
