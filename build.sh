@@ -28,7 +28,7 @@ find src/js/background/ -name "*.js" | xargs java -jar deps/compiler.jar --js_ou
 
 rm -rf build/js
 
-if [ $1 = "zip" ]
+if [ $# -eq 1 ] && [ "$1" = "zip" ]
 then
     echo "zipping package"
     zip -r pageruler.zip build
