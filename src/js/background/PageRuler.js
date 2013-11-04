@@ -264,7 +264,7 @@ chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
 			console.log('tear down');
 
 			if (!!tabId) {
-				PageRuler.unload(tabId);
+				PageRuler.disable(tabId);
 			}
 
 		break;
