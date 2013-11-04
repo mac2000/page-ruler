@@ -191,7 +191,53 @@ var PageRuler = {
 			code:	"chrome.runtime.sendMessage({ " + args + " });"
 		});
 
-	}
+	},
+
+	/**
+	 * Opens the update page
+	 */
+	openUpdateTab: function() {
+
+		chrome.tabs.create({
+			url: 'update.html'
+		});
+
+	},
+
+	/**
+	 * Sets the error popup for the page if required
+	 *
+	 * @param tabId
+	 * @param changeInfo
+	 * @param tab
+	 */
+    setPopup: function(tabId, changeInfo, tab) {
+
+		// get tab url
+        var url = changeInfo.url || tab.url || false;
+
+		// if url exists
+        if (!!url) {
+
+			// local chrome-extension:// and chrome:// pages
+            if (/^chrome\-extension:\/\//.test(url) || /^chrome:\/\//.test(url)) {
+                chrome.browserAction.setPopup({
+                    tabId:  tabId,
+                    popup:  'popup.html#local'
+                });
+            }
+
+			// chrome webstore
+            if (/^https:\/\/chrome\.google\.com\/webstore\//.test(url)) {
+                chrome.browserAction.setPopup({
+                    tabId:  tabId,
+                    popup:  'popup.html#webstore'
+                });
+            }
+
+        }
+
+    }
 
 };
 
@@ -201,6 +247,9 @@ var PageRuler = {
 
 // browser action
 chrome.browserAction.onClicked.addListener(PageRuler.browserAction);
+
+// tab load
+chrome.tabs.onUpdated.addListener(PageRuler.setPopup);
 
 // startup
 chrome.runtime.onStartup.addListener(function() {
@@ -212,6 +261,7 @@ chrome.runtime.onStartup.addListener(function() {
 chrome.runtime.onInstalled.addListener(function() {
 	console.log('onInstalled');
 	PageRuler.init();
+	PageRuler.openUpdateTab();
 });
 
 // messages
@@ -264,7 +314,7 @@ chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
 			console.log('tear down');
 
 			if (!!tabId) {
-				PageRuler.unload(tabId);
+				PageRuler.disable(tabId);
 			}
 
 		break;

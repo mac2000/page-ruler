@@ -5,7 +5,7 @@
 	 */
 	chrome.runtime.sendMessage({
 		action:	'trackPageview',
-		page:	'options'
+		page:	'options.html'
 	});
 
 	/*

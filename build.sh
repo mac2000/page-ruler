@@ -24,6 +24,16 @@ echo "moving options"
 cp build/options/* build/
 rm -rf build/options
 
+# move update page
+echo "moving update page"
+cp build/update/* build/
+rm -rf build/update
+
+# move popups
+echo "moving popup page"
+cp build/popup/* build/
+rm -rf build/popup
+
 # build js and remove src
 
 FORMATTING=""

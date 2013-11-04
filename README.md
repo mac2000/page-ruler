@@ -15,7 +15,16 @@ can be run which will create a new build in the `build` directory for your local
 
 ### Translating
 
-If you would like to contribute a translation please add them in `src/_locales` using the guildelines specified in the
-[Chrome extension internationalization guide](http://developer.chrome.com/extensions/i18n.html).
+If you would like to contribute a translation please either:
 
-Translations should be based on the master English version located at `src/_locales/en/messages.json`
+1. fork the repository, add them in `src/_locales` using the guildelines specified in the
+[Chrome extension internationalization guide](http://developer.chrome.com/extensions/i18n.html) and submit a pull request.
+2. download the English master version at [src/_locales/en/messages.json](https://github.com/wrakky/page-ruler/blob/master/src/_locales/en/messages.json)
+and create a new ticket in the [project issue tracker](https://github.com/wrakky/page-ruler/issues) attaching your translated version.
+Please prefix the issue title with '[translation]' and remember to say what language it is for!
+
+All translations should be based on the master English version located at `src/_locales/en/messages.json`
+
+### Credit
+If you would like to be credited for your contribution on the upgrade page please also include a name and link (personal site, twitter etc)
+with your submission

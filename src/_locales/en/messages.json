@@ -123,6 +123,72 @@
 	"optionsStatisticsHelp": {
 		"message": "Information collected contains no personal information and is used solely for the purpose of improving this extension by seeing which sections are used",
 		"description": "Message explaining how the anonymouse usage statistics is used"
+	},
+
+    "updatePageTitle": {
+        "message": "Page Ruler Updated",
+        "desciption": "Page title for the update page"
+    },
+
+    "updatePageHeader": {
+        "message": "Page Ruler has been updated to version <span>$VERSION$</span>",
+        "description": "Header message for the page containing the new version number",
+        "placeholders": {
+            "version": {
+                "content": "$1",
+                "example": "2.0.1"
+            }
+        }
+    },
+
+    "updateContributeTitle": {
+        "message": "Contribute to Page Ruler",
+        "desciption": "Title for the contribute side box"
+    },
+
+    "updateTranslateTitle": {
+        "message": "Translate",
+        "desciption": "Title for the translate section in the contribute side box"
+    },
+
+    "updateTranslateDescription": {
+        "message": "Want to use Page Ruler in your own language? Visit the <a href='https://github.com/wrakky/page-ruler'>GitHub project page</a> and follow the instructions on how to submit a translation.",
+        "desciption": "Description of how to find out how to contribute a translation"
+    },
+
+    "updateContributorsTitle": {
+        "message": "Contributors",
+        "desciption": "Title for the contributors side box"
+    },
+
+    "updateCodeTitle": {
+        "message": "Code",
+        "desciption": "Title for the code section in the contributors side box"
+    },
+
+	"updateIconsTitle": {
+		"message": "Icons",
+		"desciption": "Title for the icons section in the contributors side box"
+	},
+
+    "updateTranslationsTitle": {
+        "message": "Translations",
+        "desciption": "Title for the translations section in the contributors side box"
+    },
+
+    "updateHistoryTitle": {
+        "message": "What's New?",
+        "desciption": "Title for the update history section"
+    },
+
+	"errorLocal": {
+		"message": "Extensions cannot run in local chrome pages for security reasons",
+		"description": "Error message to show when someone tries to run the extension in a chrome extension page"
+	},
+
+	"errorWebStore": {
+		"message": "Extensions cannot run in the chrome web store for security reasons",
+		"description": "Error message to show when someone tries to run the extension in a the chrome web store"
 	}
 
 }
