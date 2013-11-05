@@ -13,30 +13,66 @@
   border: none !important;
   -webkit-box-sizing: border-box !important;
   box-sizing: border-box !important;
+  min-height: inherit !important;
+  -webkit-border-radius: 0px !important;
+  border-radius: 0px !important;
 }
 
-/* line 35, content.scss */
+/* line 37, content.scss */
 *[id^=page-ruler-] {
   width: auto !important;
 }
 
-/* line 39, content.scss */
+/* line 41, content.scss */
 div[id^=page-ruler], p[id^=page-ruler], h1[id^=page-ruler], h2[id^=page-ruler], h3[id^=page-ruler], h4[id^=page-ruler], h5[id^=page-ruler] {
   display: block !important;
 }
 
-/* line 44, content.scss */
+/* line 46, content.scss */
 input[id^=page-ruler] {
   -webkit-appearance: textfield !important;
   appearance: textfield !important;
 }
-/* line 46, content.scss */
+/* line 48, content.scss */
 input[id^=page-ruler][type=checkbox] {
   -webkit-appearance: checkbox !important;
   appearance: checkbox !important;
 }
+/* line 52, content.scss */
+input[id^=page-ruler][type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  cursor: pointer !important;
+  display: block !important;
+  width: 14px !important;
+  color: #333 !important;
+  text-align: center !important;
+  position: relative !important;
+  background-color: #ccc !important;
+}
+/* line 63, content.scss */
+input[id^=page-ruler][type=number]::-webkit-inner-spin-button:hover {
+  color: #3f79c2 !important;
+}
+/* line 68, content.scss */
+input[id^=page-ruler][type=number]::-webkit-inner-spin-button:before, input[id^=page-ruler][type=number]::-webkit-inner-spin-button:after {
+  content: "^" !important;
+  position: absolute !important;
+  right: 0 !important;
+  font-family: monospace !important;
+  font-size: 20px !important;
+  right: 1px !important;
+}
+/* line 77, content.scss */
+input[id^=page-ruler][type=number]::-webkit-inner-spin-button:before {
+  top: -1px !important;
+}
+/* line 81, content.scss */
+input[id^=page-ruler][type=number]::-webkit-inner-spin-button:after {
+  bottom: -5px !important;
+  -webkit-transform: rotate(180deg) !important;
+}
 
-/* line 54, content.scss */
+/* line 91, content.scss */
 #page-ruler-toolbar {
   z-index: 2000005 !important;
   position: fixed !important;
@@ -47,7 +83,7 @@ input[id^=page-ruler][type=checkbox] {
   background-color: #3f79c2 !important;
   cursor: default !important;
 }
-/* line 65, content.scss */
+/* line 102, content.scss */
 #page-ruler-toolbar label {
   margin-left: 10px !important;
   font-weight: bold !important;
@@ -55,13 +91,13 @@ input[id^=page-ruler][type=checkbox] {
   cursor: default !important;
   color: #ffffff !important;
 }
-/* line 73, content.scss */
+/* line 110, content.scss */
 #page-ruler-toolbar input[type=number] {
   padding: 3px 17px 3px 3px !important;
   width: 80px !important;
   text-align: right !important;
 }
-/* line 79, content.scss */
+/* line 116, content.scss */
 #page-ruler-toolbar input[type=color] {
   width: 40px !important;
   height: 20px !important;
@@ -69,36 +105,36 @@ input[id^=page-ruler][type=checkbox] {
   border-radius: 2px !important;
   border: 1px solid #777777 !important;
 }
-/* line 86, content.scss */
+/* line 123, content.scss */
 #page-ruler-toolbar .container {
   display: inline-block !important;
   padding-top: 5px !important;
 }
-/* line 91, content.scss */
+/* line 128, content.scss */
 #page-ruler-toolbar .close-container {
   float: right !important;
   padding: 5px !important;
 }
-/* line 94, content.scss */
+/* line 131, content.scss */
 #page-ruler-toolbar .close-container img {
   cursor: pointer !important;
 }
-/* line 99, content.scss */
+/* line 136, content.scss */
 #page-ruler-toolbar .px-container {
   display: inline !important;
   position: relative !important;
 }
-/* line 102, content.scss */
+/* line 139, content.scss */
 #page-ruler-toolbar .px-container:after {
   content: 'px' !important;
   position: absolute !important;
-  right: 20px !important;
+  right: 17px !important;
   top: 0px !important;
   color: #aaaaaa !important;
   -webkit-user-select: none !important;
   user-select: none !important;
 }
-/* line 112, content.scss */
+/* line 149, content.scss */
 #page-ruler-toolbar .element-toggle-container {
   float: left !important;
   height: 30px !important;
@@ -107,18 +143,18 @@ input[id^=page-ruler][type=checkbox] {
   padding-top: 2px !important;
   cursor: pointer !important;
 }
-/* line 119, content.scss */
+/* line 156, content.scss */
 #page-ruler-toolbar .element-toggle-container span {
   cursor: pointer !important;
   padding-left: 5px !important;
 }
-/* line 123, content.scss */
+/* line 160, content.scss */
 #page-ruler-toolbar .element-toggle-container img {
   padding: 0px 5px !important;
   top: 4px !important;
   cursor: pointer !important;
 }
-/* line 130, content.scss */
+/* line 167, content.scss */
 #page-ruler-toolbar #page-ruler-toolbar-container {
   height: 30px !important;
   display: table-cell !important;
@@ -128,7 +164,7 @@ input[id^=page-ruler][type=checkbox] {
   float: left !important;
 }
 
-/* line 143, content.scss */
+/* line 180, content.scss */
 #page-ruler-element-toolbar {
   background-color: #dae5f3 !important;
   height: 30px !important;
@@ -138,27 +174,27 @@ input[id^=page-ruler][type=checkbox] {
   width: 100% !important;
   display: none !important;
 }
-/* line 152, content.scss */
+/* line 189, content.scss */
 #page-ruler-element-toolbar label {
   color: #000000 !important;
 }
-/* line 156, content.scss */
+/* line 193, content.scss */
 #page-ruler-element-toolbar span {
   font-weight: bold !important;
 }
-/* line 158, content.scss */
+/* line 195, content.scss */
 #page-ruler-element-toolbar span.tag {
   color: #00970C !important;
 }
-/* line 161, content.scss */
+/* line 198, content.scss */
 #page-ruler-element-toolbar span.id {
   color: #B12C9D !important;
 }
-/* line 164, content.scss */
+/* line 201, content.scss */
 #page-ruler-element-toolbar span.cls {
   color: #994500 !important;
 }
-/* line 169, content.scss */
+/* line 206, content.scss */
 #page-ruler-element-toolbar .help-container {
   padding-left: 20px !important;
   background: transparent url("images/help.png") no-repeat left center !important;
@@ -166,55 +202,55 @@ input[id^=page-ruler][type=checkbox] {
   flex: 1 !important;
   padding-top: 8px !important;
 }
-/* line 177, content.scss */
+/* line 214, content.scss */
 #page-ruler-element-toolbar .nav-container {
   padding-left: 10px !important;
   cursor: pointer !important;
   overflow: hidden !important;
   white-space: nowrap !important;
 }
-/* line 182, content.scss */
+/* line 219, content.scss */
 #page-ruler-element-toolbar .nav-container * {
   cursor: pointer !important;
 }
-/* line 185, content.scss */
+/* line 222, content.scss */
 #page-ruler-element-toolbar .nav-container span {
   font-size: 11px !important;
 }
-/* line 188, content.scss */
+/* line 225, content.scss */
 #page-ruler-element-toolbar .nav-container img {
   top: 3px !important;
   padding-right: 2px !important;
 }
-/* line 192, content.scss */
+/* line 229, content.scss */
 #page-ruler-element-toolbar .nav-container > div {
   display: inline-block !important;
 }
-/* line 197, content.scss */
+/* line 234, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-element {
   padding-left: 10px !important;
   padding-top: 3px !important;
 }
-/* line 200, content.scss */
+/* line 237, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-element span {
   font-size: 13px !important;
 }
-/* line 205, content.scss */
+/* line 242, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-navigate-container {
   padding-left: 10px !important;
   flex: 1 !important;
   display: flex !important;
 }
-/* line 211, content.scss */
+/* line 248, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-container {
   float: right !important;
   padding-top: 2px !important;
 }
-/* line 214, content.scss */
+/* line 251, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-container > label {
   top: -8px !important;
 }
-/* line 219, content.scss */
+/* line 256, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle {
   position: relative !important;
   width: 70px !important;
@@ -222,19 +258,19 @@ input[id^=page-ruler][type=checkbox] {
   -webkit-user-select: none !important;
   user-select: none !important;
 }
-/* line 224, content.scss */
+/* line 261, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle input {
   display: none !important;
 }
-/* line 229, content.scss */
+/* line 266, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle input:checked + label .inner {
   margin-left: 0 !important;
 }
-/* line 232, content.scss */
+/* line 269, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle input:checked + label .switch {
   right: 0px !important;
 }
-/* line 239, content.scss */
+/* line 276, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label {
   display: block !important;
   overflow: hidden !important;
@@ -247,11 +283,11 @@ input[id^=page-ruler][type=checkbox] {
   height: 26px !important;
   z-index: 1 !important;
 }
-/* line 250, content.scss */
+/* line 287, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label .inner, #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label .switch {
   cursor: pointer !important;
 }
-/* line 254, content.scss */
+/* line 291, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label .inner {
   width: 200% !important;
   margin-left: -100% !important;
@@ -259,7 +295,7 @@ input[id^=page-ruler][type=checkbox] {
   -webkit-transition-delay: 0s;
   transition: margin 0.3s ease-in 0s !important;
 }
-/* line 258, content.scss */
+/* line 295, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label .inner:after, #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label .inner:before {
   float: left !important;
   width: 50% !important;
@@ -273,7 +309,7 @@ input[id^=page-ruler][type=checkbox] {
   -webkit-box-sizing: border-box !important;
   box-sizing: border-box !important;
 }
-/* line 270, content.scss */
+/* line 307, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label .inner:before {
   content: "__MSG_elementToolbarToggleOn__" !important;
   text-transform: uppercase !important;
@@ -281,7 +317,7 @@ input[id^=page-ruler][type=checkbox] {
   background-color: #3f79c2 !important;
   color: #ffffff !important;
 }
-/* line 277, content.scss */
+/* line 314, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label .inner:after {
   content: "__MSG_elementToolbarToggleOff__" !important;
   text-transform: uppercase !important;
@@ -290,7 +326,7 @@ input[id^=page-ruler][type=checkbox] {
   color: #999999 !important;
   text-align: right !important;
 }
-/* line 287, content.scss */
+/* line 324, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label .switch {
   width: 16px !important;
   margin: 3px !important;
@@ -307,7 +343,7 @@ input[id^=page-ruler][type=checkbox] {
   transition: all 0.3s ease-in 0s !important;
 }
 
-/* line 307, content.scss */
+/* line 344, content.scss */
 #page-ruler-mask {
   width: 100% !important;
   height: 100% !important;
@@ -318,14 +354,14 @@ input[id^=page-ruler][type=checkbox] {
   cursor: crosshair !important;
 }
 
-/* line 318, content.scss */
+/* line 355, content.scss */
 #page-ruler {
   position: absolute !important;
   z-index: 2000005 !important;
   border-width: 1px !important;
   border-style: dashed !important;
 }
-/* line 324, content.scss */
+/* line 361, content.scss */
 #page-ruler .container {
   position: relative !important;
   width: 100% !important;
@@ -333,7 +369,7 @@ input[id^=page-ruler][type=checkbox] {
   cursor: move !important;
   overflow: hidden !important;
 }
-/* line 331, content.scss */
+/* line 368, content.scss */
 #page-ruler .container .corner {
   position: absolute !important;
   width: 16px !important;
@@ -341,11 +377,11 @@ input[id^=page-ruler][type=checkbox] {
   border-width: 1px !important;
   border-style: dashed !important;
 }
-/* line 339, content.scss */
+/* line 376, content.scss */
 #page-ruler .container .edge {
   position: absolute !important;
 }
-/* line 343, content.scss */
+/* line 380, content.scss */
 #page-ruler .container .top {
   top: 0px !important;
   left: 0px !important;
@@ -353,7 +389,7 @@ input[id^=page-ruler][type=checkbox] {
   width: 100% !important;
   cursor: n-resize !important;
 }
-/* line 351, content.scss */
+/* line 388, content.scss */
 #page-ruler .container .bottom {
   bottom: 0px !important;
   left: 0px !important;
@@ -361,7 +397,7 @@ input[id^=page-ruler][type=checkbox] {
   width: 100% !important;
   cursor: n-resize !important;
 }
-/* line 359, content.scss */
+/* line 396, content.scss */
 #page-ruler .container .left {
   top: 0px !important;
   left: 0px !important;
@@ -369,7 +405,7 @@ input[id^=page-ruler][type=checkbox] {
   width: 8px !important;
   cursor: w-resize !important;
 }
-/* line 367, content.scss */
+/* line 404, content.scss */
 #page-ruler .container .right {
   top: 0px !important;
   right: 0px !important;
@@ -377,7 +413,7 @@ input[id^=page-ruler][type=checkbox] {
   width: 8px !important;
   cursor: w-resize !important;
 }
-/* line 375, content.scss */
+/* line 412, content.scss */
 #page-ruler .container .top-left {
   top: 0px !important;
   left: 0px !important;
@@ -385,7 +421,7 @@ input[id^=page-ruler][type=checkbox] {
   border-top: none !important;
   cursor: nw-resize !important;
 }
-/* line 383, content.scss */
+/* line 420, content.scss */
 #page-ruler .container .top-right {
   top: 0px !important;
   right: 0px !important;
@@ -393,7 +429,7 @@ input[id^=page-ruler][type=checkbox] {
   border-top: none !important;
   cursor: ne-resize !important;
 }
-/* line 391, content.scss */
+/* line 428, content.scss */
 #page-ruler .container .bottom-left {
   bottom: 0px !important;
   left: 0px !important;
@@ -401,7 +437,7 @@ input[id^=page-ruler][type=checkbox] {
   border-bottom: none !important;
   cursor: sw-resize !important;
 }
-/* line 399, content.scss */
+/* line 436, content.scss */
 #page-ruler .container .bottom-right {
   bottom: 0px !important;
   right: 0px !important;
@@ -409,11 +445,11 @@ input[id^=page-ruler][type=checkbox] {
   border-bottom: none !important;
   cursor: se-resize !important;
 }
-/* line 410, content.scss */
+/* line 447, content.scss */
 #page-ruler.tracking .container {
   cursor: pointer !important;
 }
-/* line 412, content.scss */
+/* line 449, content.scss */
 #page-ruler.tracking .container .edge, #page-ruler.tracking .container .corner {
   cursor: pointer !important;
 }

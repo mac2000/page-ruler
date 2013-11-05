@@ -31,6 +31,8 @@ $element-toolbar-color: lighten($toolbar-color, 40%);
 	color:			#000000 !important;
 	border:			none !important;
 	@include		box-sizing(border-box !important);
+	min-height:		inherit !important;
+	@include		border-radius(0px !important);
 }
 *[id^=page-ruler-] {
 	width:	auto !important;
@@ -45,6 +47,41 @@ input {
 		@include appearance(textfield !important);
 		&[type=checkbox] {
 			@include appearance(checkbox !important);
+		}
+		&[type=number] {
+			&::-webkit-inner-spin-button {
+				-webkit-appearance:	none !important;
+				cursor:				pointer !important;
+				display:			block !important;
+				width:				14px !important;
+				color:				#333 !important;
+				text-align:			center !important;
+				position:			relative !important;
+				background-color:	#ccc !important;
+			}
+
+			&::-webkit-inner-spin-button:hover {
+				color:	$toolbar-color !important;
+			}
+
+			&::-webkit-inner-spin-button:before,
+			&::-webkit-inner-spin-button:after {
+				content:		"^" !important;
+				position:		absolute !important;
+				right:			0 !important;
+				font-family:	monospace !important;
+				font-size:		20px !important;
+				right:			1px !important;
+			}
+
+			&::-webkit-inner-spin-button:before {
+				top:	-1px !important;
+			}
+
+			&::-webkit-inner-spin-button:after {
+				bottom:				-5px !important;
+				-webkit-transform:	rotate(180deg) !important;
+			}
 		}
 	}
 }
@@ -102,7 +139,7 @@ input {
 		&:after {
 			content:	'px' !important;
 			position:	absolute !important;
-			right:		20px !important;
+			right:		17px !important;
 			top:		0px !important;
 			color:		#aaaaaa !important;
 			@include	user-select(none !important);
