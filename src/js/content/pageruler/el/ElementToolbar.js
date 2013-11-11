@@ -197,7 +197,7 @@ pr.el.ElementToolbar = pr.cls(
 
 			var container = pr.El.createEl('div', {
 				'id':		'element-toolbar-help-container',
-				'cls':		'help-container container'
+				'cls':		['help-container', 'container']
 			}, {}, pr.Util.locale('elementToolbarHelp'));
 
 			return container;
@@ -258,7 +258,7 @@ pr.el.ElementToolbar = pr.cls(
 				'div',
 				{
 					'id':		'element-toolbar-element-container',
-					'cls':		'container nav-container',
+					'cls':		['container', 'nav-container'],
 					'style':	'display:none !important;'
 				},
 				{
@@ -642,9 +642,9 @@ pr.el.ElementToolbar = pr.cls(
 				var descParts	= pr.El.getDescription(element, true);
 
 				// set tag, id and class parts
-				container.querySelector('.tag').innerText	= descParts.tag;
-				container.querySelector('.id').innerText	= descParts.id;
-				container.querySelector('.cls').innerText	= descParts.cls;
+				container.querySelector('.page-ruler-tag').innerText	= descParts.tag;
+				container.querySelector('.page-ruler-id').innerText	= descParts.id;
+				container.querySelector('.page-ruler-cls').innerText	= descParts.cls;
 
 				// update title
 				container.title = title + ': ' + descParts.tag + descParts.id + descParts.cls;

@@ -31,7 +31,7 @@ $element-toolbar-color: lighten($toolbar-color, 40%);
 	color:			#000000 !important;
 	border:			none !important;
 	@include		box-sizing(border-box !important);
-	min-height:		inherit !important;
+	min-height:		0px !important;
 	@include		border-radius(0px !important);
 }
 *[id^=page-ruler-] {
@@ -120,12 +120,12 @@ input {
 		border:		1px solid #777777 !important;
 	}
 
-	.container {
+	.page-ruler-container {
 		display:		inline-block !important;
 		padding-top:	5px !important;
 	}
 
-	.close-container {
+	.page-ruler-close-container {
 		float:		right !important;
 		padding:	5px !important;
 		img {
@@ -133,7 +133,7 @@ input {
 		}
 	}
 
-	.px-container {
+	.page-ruler-px-container {
 		display:	inline !important;
 		position:	relative !important;
 		&:after {
@@ -146,7 +146,7 @@ input {
 		}
 	}
 
-	.element-toggle-container {
+	.page-ruler-element-toggle-container {
 		float:				left !important;
 		height:				$toolbar-height !important;
 		line-height:		$toolbar-height !important;
@@ -192,18 +192,18 @@ input {
 
 	span {
 		font-weight:	bold !important;
-		&.tag {
+		&.page-ruler-tag {
 			color:	#00970C !important;
 		}
-		&.id {
+		&.page-ruler-id {
 			color:	#B12C9D !important;
 		}
-		&.cls {
+		&.page-ruler-cls {
 			color:	#994500 !important;
 		}
 	}
 
-	.help-container {
+	.page-ruler-help-container {
 		padding-left:	20px !important;
 		background:		transparent url('images/help.png') no-repeat left center !important;
 		margin-left:	10px !important;
@@ -211,7 +211,7 @@ input {
 		padding-top:	8px !important;
 	}
 
-	.nav-container {
+	.page-ruler-nav-container {
 		padding-left:	10px !important;
 		cursor:			pointer !important;
 		overflow:		hidden !important;
@@ -263,10 +263,10 @@ input {
 
 			&:checked {
 				+ label {
-					.inner {
+					.page-ruler-inner {
 						margin-left: 0 !important;
 					}
-					.switch {
+					.page-ruler-switch {
 						right:	0px !important;
 					}
 				}
@@ -284,11 +284,11 @@ input {
 			height:			26px !important;
 			z-index:		1 !important;
 
-			.inner, .switch {
+			.page-ruler-inner, .page-ruler-switch {
 				cursor: pointer !important;
 			}
 
-			.inner {
+			.page-ruler-inner {
 				width:			200% !important;
 				margin-left:	-100% !important;
 				@include		transition(margin 0.3s ease-in 0s !important);
@@ -321,7 +321,7 @@ input {
 				}
 			}
 
-			.switch {
+			.page-ruler-switch {
 				width:		16px !important;
 				margin:		3px !important;
 				background:	#ffffff !important;
@@ -358,14 +358,14 @@ input {
 	border-width:		1px !important;
 	border-style:		dashed !important;
 
-	.container {
+	.page-ruler-container {
 		position:	relative !important;
 		width:		100% !important;
 		height:		100% !important;
 		cursor:		move !important;
 		overflow:	hidden !important;
 
-		.corner {
+		.page-ruler-corner {
 			position:		absolute !important;
 			width:			16px !important;
 			height:			16px !important;
@@ -373,11 +373,11 @@ input {
 			border-style:	dashed !important;
 		}
 
-		.edge {
+		.page-ruler-edge {
 			position:	absolute !important;
 		}
 
-		.top {
+		.page-ruler-top {
 			top:	0px !important;
 			left:	0px !important;
 			height:	8px !important;
@@ -385,7 +385,7 @@ input {
 			cursor:	n-resize !important;
 		}
 
-		.bottom {
+		.page-ruler-bottom {
 			bottom:	0px !important;
 			left:	0px !important;
 			height:	8px !important;
@@ -393,7 +393,7 @@ input {
 			cursor:	n-resize !important;
 		}
 
-		.left {
+		.page-ruler-left {
 			top:	0px !important;
 			left:	0px !important;
 			height:	100% !important;
@@ -401,7 +401,7 @@ input {
 			cursor:	w-resize !important;
 		}
 
-		.right {
+		.page-ruler-right {
 			top:	0px !important;
 			right:	0px !important;
 			height:	100% !important;
@@ -409,7 +409,7 @@ input {
 			cursor:	w-resize !important;
 		}
 
-		.top-left {
+		.page-ruler-top-left {
 			top:			0px !important;
 			left:			0px !important;
 			border-left:	none !important;
@@ -417,7 +417,7 @@ input {
 			cursor:			nw-resize !important;
 		}
 
-		.top-right {
+		.page-ruler-top-right {
 			top:			0px !important;
 			right:			0px !important;
 			border-right:	none !important;
@@ -425,7 +425,7 @@ input {
 			cursor:			ne-resize !important;
 		}
 
-		.bottom-left {
+		.page-ruler-bottom-left {
 			bottom:			0px !important;
 			left:			0px !important;
 			border-left:	none !important;
@@ -433,7 +433,7 @@ input {
 			cursor:			sw-resize !important;
 		}
 
-		.bottom-right {
+		.page-ruler-bottom-right {
 			bottom:			0px !important;
 			right:			0px !important;
 			border-right:	none !important;
@@ -443,10 +443,10 @@ input {
 
 	}
 
-	&.tracking {
-		.container {
+	&.page-ruler-tracking {
+		.page-ruler-container {
 			cursor:	pointer !important;
-			.edge, .corner {
+			.page-ruler-edge, .page-ruler-corner {
 				cursor:	pointer !important;
 			}
 		}

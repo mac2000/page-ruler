@@ -13,8 +13,8 @@ pr.el.Element = pr.cls(
 
 		// set up initial urler config
 		var config = {
-			width:	dom.offsetWidth,
-			height:	dom.offsetHeight,
+			width:	pr.El.getWidth(dom),
+			height:	pr.El.getHeight(dom),
 			top:	pr.El.getTop(dom),
 			left:	pr.El.getLeft(dom)
 		};

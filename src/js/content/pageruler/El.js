@@ -50,6 +50,16 @@ pr.El = {
 					attr = 'class';
 				}
 
+				// add page-ruler- prefix to all classes
+				if (attr === 'class') {
+					if (attrVal instanceof Array) {
+						attrVal = 'page-ruler-' + attrVal.join(' page-ruler-');
+					}
+					else {
+						attrVal = 'page-ruler-' + attrVal;
+					}
+				}
+
 				// add id prefix to any 'for' properties
 				if (attr === 'for') {
 					attrVal = 'page-ruler-' + attrVal;
@@ -207,44 +217,66 @@ pr.El = {
 	
 	/**
 	 * Returns the left position of the element
-	 * http://www.quirksmode.org/js/findpos.html
 	 * @param {HTMLElement} el	The element to get the left position for
 	 * @return {Number}
 	 */	 
 	getLeft: function(el) {
-		
-		var curLeft		= 0;
-		var original	= el;
-		
-		do {
-			// get border left width
-			var borderLeft	= el === original ? 0 : parseInt(window.getComputedStyle(el, null).getPropertyValue('border-left-width'), 10);
-			curLeft			+= el.offsetLeft + borderLeft;
-		} while (el = el.offsetParent);
-		
-		return curLeft;
+
+		// get element top from bounding rect
+		var boundingRect	= el.getBoundingClientRect();
+		var left			= boundingRect.left || 0;
+
+		// calculate body top offset
+		// we will subtract this from the left value in case of margins pushing it out
+		var bodyOffset		= document.body.getBoundingClientRect().left;
+
+		return left - bodyOffset;
 		
 	},
 	
 	/**
 	 * Returns the top position of the element
-	 * http://www.quirksmode.org/js/findpos.html
 	 * @param {HTMLElement} el	The element to get the top position for
 	 * @return {Number}
 	 */	 
 	getTop: function(el) {
-		
-		var curTop		= 0;
-		var original	= el;
-		
-		do {
-			// get border top width
-			var borderTop	= el === original ? 0 : parseInt(window.getComputedStyle(el, null).getPropertyValue('border-top-width'), 10);
-			curTop			+= el.offsetTop + borderTop;
-		} while (el = el.offsetParent);
 
-		return curTop;
+		// get element top from bounding rect
+		var boundingRect	= el.getBoundingClientRect();
+		var top				= boundingRect.top || 0;
+
+		// calculate body top offset
+		// we will subtract this from the top value due to the toolbar pushing it down
+		var bodyOffset		= document.body.getBoundingClientRect().top;
+
+		return top - bodyOffset;
 		
+	},
+
+	/**
+	 * Returns the width of the element
+	 * @param {HTMLElement} el	The element to get the width for
+	 * @return {Number}
+	 */
+	getWidth: function(el) {
+
+		var boundingRect = el.getBoundingClientRect();
+
+		return boundingRect.width || 0;
+
+	},
+
+	/**
+	 * Returns the height of the element
+	 * @param {HTMLElement} el	The element to get the width for
+	 * @return {Number}
+	 */
+	getHeight: function(el) {
+
+		var boundingRect = el.getBoundingClientRect();
+
+		return boundingRect.height || 0;
+
 	},
 	
 	/**
@@ -281,7 +313,7 @@ pr.El = {
 			desc += '.' + Array.prototype.slice.call(el.classList).join('.');
 			parts.cls = '.' + Array.prototype.slice.call(el.classList).join('.');
 		}
-		
+		console.log(desc);
 		// return full description
 		return asParts && parts || desc;
 		

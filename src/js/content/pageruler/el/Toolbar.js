@@ -206,7 +206,7 @@ pr.el.Toolbar = pr.cls(
 
 			var container = pr.El.createEl('div', {
 				'id':	'toolbar-element-toggle',
-				'cls':	'container element-toggle-container'
+				'cls':	['container', 'element-toggle-container']
 			}, {
 				'mouseover': function(e) {
 					label.style.removeProperty('display');
@@ -445,7 +445,7 @@ pr.el.Toolbar = pr.cls(
 			// create container
 			var container	= pr.El.createEl('div', {
 				'id':		'toolbar-close-container',
-				'class':	'container close-container'
+				'class':	['container', 'close-container']
 			});
 
 			// create close button

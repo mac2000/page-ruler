@@ -33,7 +33,7 @@ pr.el.Resize = pr.cls(
 		// set attributes
 		var attrs = {
 			'id':		'resize-' + id,
-			'class':	cls + ' ' + id
+			'class':	[cls, id]
 		};
 		
 		// create dom element
