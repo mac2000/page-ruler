@@ -198,6 +198,11 @@
 		"description": "Header message for the update page when a new user installs it"
 	},
 
+	"updateDoNotShowPageAgain": {
+		"message": "Do not show this page again",
+		"description": "Label for the do not show this page again checkbox on the update page"
+	},
+
 	"optionsHideUpdateTabLabel": {
 		"message": "Do Not Show Update Tab:",
 		"description": "The label for the do not show update tab checkbox"
