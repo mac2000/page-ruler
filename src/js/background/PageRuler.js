@@ -4,69 +4,50 @@
 var PageRuler = {
 
 	/**
-	 * The current version of the addon
-	 */
-	version:	'2.0.2',
-
-	/**
 	 * Addon initialisation
 	 */
-	init:		function() {
+	init:		function(type, previousVersion) {
 
 		console.log('init');
 
-		var _this = this;
+		var manifest	= chrome.runtime.getManifest();
+		var version		= manifest.version;
 
-		// get the stored version - we use this to determine whether the addon has been installed, updated or run
-		chrome.storage.sync.get('version', function(items) {
+		switch (type) {
 
-			// get version
-			var version = items.version;
+			// First time install
+			case 'install':
 
-			// no version found - new install
-			if (!version) {
+				console.log('First time install version: ', version);
 
-				console.log('First time install version ', _this.version);
-
-				PageRuler.Analytics.trackEvent('Run', 'Install', _this.version);
+				PageRuler.Analytics.trackEvent('Run', 'Install', version);
 
 				// store initial version and default settings
 				chrome.storage.sync.set({
-					'version':		_this.version,
 					'statistics':	true
 				});
 
-			}
-			// already installed
-			else {
+				break;
 
-				console.log('Version installed: ', _this.version);
+			// extension update
+			case 'update':
 
-				// new version detected
-				if (version !== _this.version) {
+				console.log('Update version. From: ', previousVersion, ' To: ', version);
 
-					console.log('Update to version: ', _this.version);
+				PageRuler.Analytics.trackEvent('Run', 'Update', version);
 
-					PageRuler.Analytics.trackEvent('Run', 'Update', _this.version);
+				break;
 
-					// save current version
-					chrome.storage.sync.set({
-						'version':	_this.version
-					});
+			// anything else
+			default:
 
-				}
-				// no new version
-				else {
+				console.log('Existing version run: ', version);
 
-					console.log('Existing version run: ', _this.version);
+				PageRuler.Analytics.trackEvent('Run', 'Open', version);
 
-					PageRuler.Analytics.trackEvent('Run', 'Open', _this.version);
+				break;
 
-				}
-
-			}
-
-		});
+		}
 
 	},
 
@@ -196,10 +177,10 @@ var PageRuler = {
 	/**
 	 * Opens the update page
 	 */
-	openUpdateTab: function() {
+	openUpdateTab: function(type) {
 
 		chrome.tabs.create({
-			url: 'update.html'
+			url: 'update.html#' + type
 		});
 
 	},
@@ -258,10 +239,19 @@ chrome.runtime.onStartup.addListener(function() {
 });
 
 // installation
-chrome.runtime.onInstalled.addListener(function() {
+chrome.runtime.onInstalled.addListener(function(details) {
+
 	console.log('onInstalled');
-	PageRuler.init();
-	PageRuler.openUpdateTab();
+	PageRuler.init(details.reason, details.previousVersion);
+
+	switch (details.reason) {
+		case 'install':
+			PageRuler.openUpdateTab('install');
+			break;
+		case 'update':
+			PageRuler.openUpdateTab('update');
+			break;
+	}
 });
 
 // messages

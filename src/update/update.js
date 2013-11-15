@@ -39,8 +39,18 @@
     }
 
     /*
-     * Version
+     * Header
      */
-    document.querySelector('h1').innerHTML = chrome.i18n.getMessage('updatePageHeader', chrome.runtime.getManifest().version);
+	var h1 = document.querySelector('h1');
+	var headerText = '';
+
+	if (location.hash === '#install') {
+		headerText = chrome.i18n.getMessage('updatePageHeaderInstall');
+	}
+	else {
+    	headerText = chrome.i18n.getMessage('updatePageHeader', chrome.runtime.getManifest().version);
+	}
+
+	h1.innerHTML = headerText;
 
 })();

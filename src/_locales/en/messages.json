@@ -130,16 +130,16 @@
         "desciption": "Page title for the update page"
     },
 
-    "updatePageHeader": {
-        "message": "Page Ruler has been updated to version <span>$VERSION$</span>",
-        "description": "Header message for the page containing the new version number",
-        "placeholders": {
-            "version": {
-                "content": "$1",
-                "example": "2.0.1"
-            }
-        }
-    },
+	"updatePageHeader": {
+		"message": "Page Ruler has been updated to version <span>$VERSION$</span>",
+		"description": "Header message for the page containing the new version number",
+		"placeholders": {
+			"version": {
+				"content": "$1",
+				"example": "2.0.1"
+			}
+		}
+	},
 
     "updateContributeTitle": {
         "message": "Contribute to Page Ruler",
@@ -189,6 +189,13 @@
 	"errorWebStore": {
 		"message": "Extensions cannot run in the chrome web store for security reasons",
 		"description": "Error message to show when someone tries to run the extension in a the chrome web store"
+	},
+
+	// version 2.0.3
+
+	"updatePageHeaderInstall": {
+		"message": "Thank you for installing Page Ruler!",
+		"description": "Header message for the update page when a new user installs it"
 	}
 
 }
