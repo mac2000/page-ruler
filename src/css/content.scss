@@ -33,6 +33,7 @@ $element-toolbar-color: lighten($toolbar-color, 40%);
 	@include		box-sizing(border-box !important);
 	min-height:		0px !important;
 	@include		border-radius(0px !important);
+	direction:		lrt !important;
 }
 *[id^=page-ruler-] {
 	width:	auto !important;
