@@ -55,9 +55,13 @@ ul.updates li {
 
 .sidebox {
     float: right;
-    width: 450px;
+    width: 550px;
     padding-left: 20px;
     background-color: #ffffff;
+}
+
+.sidebox.small {
+	width: 450px;
 }
 
 .box {

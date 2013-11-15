@@ -38,6 +38,14 @@
         }, false);
     }
 
+	/*
+	 * Sidebox width
+	 */
+	console.log(window.outerWidth);
+	if (window.outerWidth < 1300) {
+		document.querySelector('.sidebox').classList.add('small');
+	}
+
     /*
      * Header
      */
