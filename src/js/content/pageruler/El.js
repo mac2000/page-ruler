@@ -313,7 +313,7 @@ pr.El = {
 			desc += '.' + Array.prototype.slice.call(el.classList).join('.');
 			parts.cls = '.' + Array.prototype.slice.call(el.classList).join('.');
 		}
-		console.log(desc);
+
 		// return full description
 		return asParts && parts || desc;
 		

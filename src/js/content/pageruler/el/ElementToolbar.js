@@ -515,9 +515,15 @@ pr.el.ElementToolbar = pr.cls(
 				'for':	'element-toolbar-tracking-mode-input'
 			}, {}, pr.Util.locale('elementToolbarTrackingMode'));
 
+			var lang = (navigator.language || '').split('-')[0];
+			if (!!lang) {
+				lang = 'lang_' + lang;
+			}
+
 			// create toggle element
 			var toggle = pr.El.createEl('div', {
-				'id':	'element-toolbar-tracking-mode-toggle'
+				'id':	'element-toolbar-tracking-mode-toggle',
+				'cls':	'tracking-mode-toggle ' + lang
 			});
 
 			// create checkbox element
@@ -560,7 +566,7 @@ pr.el.ElementToolbar = pr.cls(
 			// create label switch
 			var labelSwitch = pr.El.createEl('div', {
 				'id':		'element-toolbar-tracking-mode-label-switch',
-				'class':	'switch'
+				'class':	'switch ' + lang
 			});
 
 			// add label contents

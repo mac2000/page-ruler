@@ -113,11 +113,11 @@ pr.el.Toolbar = pr.cls(
 		/**
 		 * Generates a pixel input field, with container and label
 		 * @param {string} id				Input id
-		 * @param {string} label			Input label
+		 * @param {string} labelText		Input label text
 		 * @param {function} changeListener	Value change listener
 		 * @returns {HTMLElement}
 		 */
-		generatePixelInput: function(id, label, changeListener) {
+		generatePixelInput: function(id, labelText, changeListener) {
 
 			// create container
 			var container = pr.El.createEl('div', {
@@ -129,7 +129,7 @@ pr.el.Toolbar = pr.cls(
 			var label = pr.El.createEl('label', {
 				'id':	'toolbar-' + id + '-label',
 				'for':	'toolbar-' + id
-			}, {}, label + ':');
+			}, {}, labelText + ':');
 
 			// create input
 			this.els[id] = pr.El.createEl('input', {
@@ -137,7 +137,7 @@ pr.el.Toolbar = pr.cls(
 				'type':		'number',
 				'min':		0,
 				'value':	0,
-				'title':	id
+				'title':	labelText.toLocaleLowerCase()
 			});
 
 			// change listener
@@ -253,7 +253,7 @@ pr.el.Toolbar = pr.cls(
 
 			// create width input
 			var width	= this.generatePixelInput(
-				pr.Util.locale('toolbarWidth', 'lowercase'),
+				'width',
 				pr.Util.locale('toolbarWidth'),
 				function(e) {
 					_this.ruler.setWidth(this.value);
@@ -271,7 +271,7 @@ pr.el.Toolbar = pr.cls(
 
 			// create height input
 			var height	= this.generatePixelInput(
-				pr.Util.locale('toolbarHeight', 'lowercase'),
+				'height',
 				pr.Util.locale('toolbarHeight'),
 				function(e) {
 					_this.ruler.setHeight(this.value);
@@ -313,7 +313,7 @@ pr.el.Toolbar = pr.cls(
 
 			// create left input
 			var left	= this.generatePixelInput(
-				pr.Util.locale('toolbarLeft', 'lowercase'),
+				'left',
 				pr.Util.locale('toolbarLeft'),
 				function(e) {
 					_this.ruler.setLeft(this.value, true);
@@ -330,7 +330,7 @@ pr.el.Toolbar = pr.cls(
 
 			// create top input
 			var top		= this.generatePixelInput(
-				pr.Util.locale('toolbarTop', 'lowercase'),
+				'top',
 				pr.Util.locale('toolbarTop'),
 				function(e) {
 					_this.ruler.setTop(this.value, true);
@@ -347,7 +347,7 @@ pr.el.Toolbar = pr.cls(
 
 			// create right input
 			var right	= this.generatePixelInput(
-				pr.Util.locale('toolbarRight', 'lowercase'),
+				'right',
 				pr.Util.locale('toolbarRight'),
 				function(e) {
 					_this.ruler.setRight(this.value, true);
@@ -364,7 +364,7 @@ pr.el.Toolbar = pr.cls(
 
 			// create bottom input
 			var bottom	= this.generatePixelInput(
-				pr.Util.locale('toolbarBottom', 'lowercase'),
+				'bottom',
 				pr.Util.locale('toolbarBottom'),
 				function(e) {
 					_this.ruler.setBottom(this.value, true);

@@ -256,7 +256,15 @@ input {
 
 	#page-ruler-element-toolbar-tracking-mode-toggle {
 		position:	relative !important;
+
 		width:		70px !important;
+		&.lang_pt {
+			width:	110px !important;
+		}
+		&.lang_es {
+			width:	125px !important;
+		}
+
 		display:	inline-block !important;
 		@include	user-select(none !important);
 		input {
@@ -333,6 +341,14 @@ input {
 				bottom:		0px !important;
 				right:		40px !important;
 				@include	transition(all 0.3s ease-in 0s !important);
+
+				&.lang_pt {
+					right:	80px !important;
+				}
+				&.lang_pt {
+					right:	95px !important;
+				}
+
 			}
 		}
 	}

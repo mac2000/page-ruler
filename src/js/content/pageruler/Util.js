@@ -30,12 +30,12 @@ pr.Util = {
 
 			// convert message to lower case
 			case 'lowercase':
-				text = text.toLowerCase();
+				text = text.toLocaleLowerCase();
 				break;
 
 			// convert message to upper case
 			case 'uppercase':
-				text = text.toUpperCase();
+				text = text.toLocaleUpperCase();
 				break;
 		}
 
