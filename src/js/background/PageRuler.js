@@ -24,7 +24,8 @@ var PageRuler = {
 
 				// store initial version and default settings
 				chrome.storage.sync.set({
-					'statistics':	true
+					'statistics':		true,
+					'hide_update_tab':	false
 				});
 
 				break;
@@ -179,8 +180,17 @@ var PageRuler = {
 	 */
 	openUpdateTab: function(type) {
 
-		chrome.tabs.create({
-			url: 'update.html#' + type
+		// only show update tab if the user hasn't disabled it
+		chrome.storage.sync.get('hide_update_tab', function(items) {
+
+			if (!items.hide_update_tab) {
+
+				chrome.tabs.create({
+					url: 'update.html#' + type
+				});
+
+			}
+
 		});
 
 	},

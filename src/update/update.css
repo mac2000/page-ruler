@@ -91,3 +91,9 @@ ul.updates li {
 .box li a {
     font-size: 13px;
 }
+
+#noshow {
+	border: 1px solid #cc0000;
+	background-color:	#ff9b9b;
+	font-weight:		bold;
+}

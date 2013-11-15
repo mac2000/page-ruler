@@ -23,7 +23,9 @@
 	 * Fields
 	 */
 
-	// statistics
+	/*
+	 * Statistics
+	 */
 	var statisticsField = document.getElementById('statistics');
 
 	// populate
@@ -76,5 +78,58 @@
 		}
 
 	}, this);
+
+	/*
+	 * Update tab
+	 */
+	var updateTabField = document.getElementById('hide_update_tab');
+
+	// populate
+	chrome.storage.sync.get('hide_update_tab', function(items) {
+		updateTabField.checked = !!items.hide_update_tab;
+	});
+
+	// change
+	updateTabField.addEventListener('change', function(e) {
+
+		// do not show
+		if (this.checked) {
+
+			console.log('disabling update tab');
+
+			// save setting
+			chrome.storage.sync.set({
+				'hide_update_tab': true
+			});
+
+			// send tracking after the setting is saved so it is sent
+			chrome.runtime.sendMessage(
+				{
+					action:	'trackEvent',
+					args:	['Settings', 'HideUpdateTab', '1']
+				}
+			);
+
+		}
+		else {
+
+			console.log('enabling update tab');
+
+			// save setting
+			chrome.storage.sync.set({
+				'hide_update_tab': false
+			});
+
+			// send tracking after the setting is saved so it is sent
+			chrome.runtime.sendMessage(
+				{
+					action:	'trackEvent',
+					args:	['Settings', 'HideUpdateTab', '0']
+				}
+			);
+
+		}
+
+	});
 
 })();

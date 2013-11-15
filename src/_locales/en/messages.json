@@ -196,6 +196,16 @@
 	"updatePageHeaderInstall": {
 		"message": "Thank you for installing Page Ruler!",
 		"description": "Header message for the update page when a new user installs it"
+	},
+
+	"optionsHideUpdateTabLabel": {
+		"message": "Do Not Show Update Tab:",
+		"description": "The label for the do not show update tab checkbox"
+	},
+
+	"optionsHideUpdateTabHelp": {
+		"message": "Do not show the update tab whenever a new version of the extension is installed",
+		"description": "Message explaining how the do not show update tab checkbox is used"
 	}
 
 }

@@ -53,4 +53,53 @@
 
 	h1.innerHTML = headerText;
 
+	/*
+	 * No show checkbox
+	 */
+
+	var noShowField = document.getElementById('noshow_checkbox');
+
+	// change
+	noShowField.addEventListener('change', function(e) {
+
+		// do not show
+		if (this.checked) {
+
+			console.log('disabling update tab');
+
+			// save setting
+			chrome.storage.sync.set({
+				'hide_update_tab': true
+			});
+
+			// send tracking after the setting is saved so it is sent
+			chrome.runtime.sendMessage(
+				{
+					action:	'trackEvent',
+					args:	['Settings', 'HideUpdateTab', '1']
+				}
+			);
+
+		}
+		else {
+
+			console.log('enabling update tab');
+
+			// save setting
+			chrome.storage.sync.set({
+				'hide_update_tab': false
+			});
+
+			// send tracking after the setting is saved so it is sent
+			chrome.runtime.sendMessage(
+				{
+					action:	'trackEvent',
+					args:	['Settings', 'HideUpdateTab', '0']
+				}
+			);
+
+		}
+
+	});
+
 })();
