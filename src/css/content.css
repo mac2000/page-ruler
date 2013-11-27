@@ -40,7 +40,7 @@ input[id^=page-ruler][type=checkbox] {
   appearance: checkbox !important;
 }
 /* line 53, content.scss */
-input[id^=page-ruler][type=number]::-webkit-inner-spin-button {
+input[id^=page-ruler][type=number]::-webkit-inner-spin-button, input[id^=page-ruler][type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none !important;
   cursor: pointer !important;
   display: block !important;
@@ -49,13 +49,14 @@ input[id^=page-ruler][type=number]::-webkit-inner-spin-button {
   text-align: center !important;
   position: relative !important;
   background-color: #ccc !important;
+  height: 21px !important;
 }
-/* line 64, content.scss */
-input[id^=page-ruler][type=number]::-webkit-inner-spin-button:hover {
+/* line 65, content.scss */
+input[id^=page-ruler][type=number]::-webkit-inner-spin-button:hover, input[id^=page-ruler][type=number]::-webkit-outer-spin-button:hover {
   color: #3f79c2 !important;
 }
-/* line 69, content.scss */
-input[id^=page-ruler][type=number]::-webkit-inner-spin-button:before, input[id^=page-ruler][type=number]::-webkit-inner-spin-button:after {
+/* line 72, content.scss */
+input[id^=page-ruler][type=number]::-webkit-inner-spin-button:before, input[id^=page-ruler][type=number]::-webkit-inner-spin-button:after, input[id^=page-ruler][type=number]::-webkit-outer-spin-button:before, input[id^=page-ruler][type=number]::-webkit-outer-spin-button:after {
   content: "^" !important;
   position: absolute !important;
   right: 0 !important;
@@ -63,17 +64,17 @@ input[id^=page-ruler][type=number]::-webkit-inner-spin-button:before, input[id^=
   font-size: 20px !important;
   right: 1px !important;
 }
-/* line 78, content.scss */
-input[id^=page-ruler][type=number]::-webkit-inner-spin-button:before {
-  top: -1px !important;
+/* line 81, content.scss */
+input[id^=page-ruler][type=number]::-webkit-inner-spin-button:before, input[id^=page-ruler][type=number]::-webkit-outer-spin-button:before {
+  top: -2px !important;
 }
-/* line 82, content.scss */
-input[id^=page-ruler][type=number]::-webkit-inner-spin-button:after {
-  bottom: -5px !important;
+/* line 85, content.scss */
+input[id^=page-ruler][type=number]::-webkit-inner-spin-button:after, input[id^=page-ruler][type=number]::-webkit-outer-spin-button:after {
+  bottom: -2px !important;
   -webkit-transform: rotate(180deg) !important;
 }
 
-/* line 92, content.scss */
+/* line 95, content.scss */
 #page-ruler-toolbar {
   z-index: 2000005 !important;
   position: fixed !important;
@@ -84,7 +85,7 @@ input[id^=page-ruler][type=number]::-webkit-inner-spin-button:after {
   background-color: #3f79c2 !important;
   cursor: default !important;
 }
-/* line 103, content.scss */
+/* line 106, content.scss */
 #page-ruler-toolbar label {
   margin-left: 10px !important;
   font-weight: bold !important;
@@ -92,13 +93,13 @@ input[id^=page-ruler][type=number]::-webkit-inner-spin-button:after {
   cursor: default !important;
   color: #ffffff !important;
 }
-/* line 111, content.scss */
+/* line 114, content.scss */
 #page-ruler-toolbar input[type=number] {
   padding: 3px 17px 3px 3px !important;
   width: 80px !important;
   text-align: right !important;
 }
-/* line 117, content.scss */
+/* line 120, content.scss */
 #page-ruler-toolbar input[type=color] {
   width: 40px !important;
   height: 20px !important;
@@ -106,26 +107,26 @@ input[id^=page-ruler][type=number]::-webkit-inner-spin-button:after {
   border-radius: 2px !important;
   border: 1px solid #777777 !important;
 }
-/* line 124, content.scss */
+/* line 127, content.scss */
 #page-ruler-toolbar .page-ruler-container {
   display: inline-block !important;
   padding-top: 5px !important;
 }
-/* line 129, content.scss */
+/* line 132, content.scss */
 #page-ruler-toolbar .page-ruler-close-container {
   float: right !important;
   padding: 5px !important;
 }
-/* line 132, content.scss */
+/* line 135, content.scss */
 #page-ruler-toolbar .page-ruler-close-container img {
   cursor: pointer !important;
 }
-/* line 137, content.scss */
+/* line 140, content.scss */
 #page-ruler-toolbar .page-ruler-px-container {
   display: inline !important;
   position: relative !important;
 }
-/* line 140, content.scss */
+/* line 143, content.scss */
 #page-ruler-toolbar .page-ruler-px-container:after {
   content: 'px' !important;
   position: absolute !important;
@@ -135,7 +136,7 @@ input[id^=page-ruler][type=number]::-webkit-inner-spin-button:after {
   -webkit-user-select: none !important;
   user-select: none !important;
 }
-/* line 150, content.scss */
+/* line 153, content.scss */
 #page-ruler-toolbar .page-ruler-element-toggle-container {
   float: left !important;
   height: 30px !important;
@@ -144,18 +145,18 @@ input[id^=page-ruler][type=number]::-webkit-inner-spin-button:after {
   padding-top: 2px !important;
   cursor: pointer !important;
 }
-/* line 157, content.scss */
+/* line 160, content.scss */
 #page-ruler-toolbar .page-ruler-element-toggle-container span {
   cursor: pointer !important;
   padding-left: 5px !important;
 }
-/* line 161, content.scss */
+/* line 164, content.scss */
 #page-ruler-toolbar .page-ruler-element-toggle-container img {
   padding: 0px 5px !important;
   top: 4px !important;
   cursor: pointer !important;
 }
-/* line 168, content.scss */
+/* line 171, content.scss */
 #page-ruler-toolbar #page-ruler-toolbar-container {
   height: 30px !important;
   display: table-cell !important;
@@ -165,7 +166,7 @@ input[id^=page-ruler][type=number]::-webkit-inner-spin-button:after {
   float: left !important;
 }
 
-/* line 181, content.scss */
+/* line 184, content.scss */
 #page-ruler-element-toolbar {
   background-color: #dae5f3 !important;
   height: 30px !important;
@@ -175,27 +176,27 @@ input[id^=page-ruler][type=number]::-webkit-inner-spin-button:after {
   width: 100% !important;
   display: none !important;
 }
-/* line 190, content.scss */
+/* line 193, content.scss */
 #page-ruler-element-toolbar label {
   color: #000000 !important;
 }
-/* line 194, content.scss */
+/* line 197, content.scss */
 #page-ruler-element-toolbar span {
   font-weight: bold !important;
 }
-/* line 196, content.scss */
+/* line 199, content.scss */
 #page-ruler-element-toolbar span.page-ruler-tag {
   color: #00970C !important;
 }
-/* line 199, content.scss */
+/* line 202, content.scss */
 #page-ruler-element-toolbar span.page-ruler-id {
   color: #B12C9D !important;
 }
-/* line 202, content.scss */
+/* line 205, content.scss */
 #page-ruler-element-toolbar span.page-ruler-cls {
   color: #994500 !important;
 }
-/* line 207, content.scss */
+/* line 210, content.scss */
 #page-ruler-element-toolbar .page-ruler-help-container {
   padding-left: 20px !important;
   background: transparent url("images/help.png") no-repeat left center !important;
@@ -203,55 +204,55 @@ input[id^=page-ruler][type=number]::-webkit-inner-spin-button:after {
   flex: 1 !important;
   padding-top: 8px !important;
 }
-/* line 215, content.scss */
+/* line 218, content.scss */
 #page-ruler-element-toolbar .page-ruler-nav-container {
   padding-left: 10px !important;
   cursor: pointer !important;
   overflow: hidden !important;
   white-space: nowrap !important;
 }
-/* line 220, content.scss */
+/* line 223, content.scss */
 #page-ruler-element-toolbar .page-ruler-nav-container * {
   cursor: pointer !important;
 }
-/* line 223, content.scss */
+/* line 226, content.scss */
 #page-ruler-element-toolbar .page-ruler-nav-container span {
   font-size: 11px !important;
 }
-/* line 226, content.scss */
+/* line 229, content.scss */
 #page-ruler-element-toolbar .page-ruler-nav-container img {
   top: 3px !important;
   padding-right: 2px !important;
 }
-/* line 230, content.scss */
+/* line 233, content.scss */
 #page-ruler-element-toolbar .page-ruler-nav-container > div {
   display: inline-block !important;
 }
-/* line 235, content.scss */
+/* line 238, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-element {
   padding-left: 10px !important;
   padding-top: 3px !important;
 }
-/* line 238, content.scss */
+/* line 241, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-element span {
   font-size: 13px !important;
 }
-/* line 243, content.scss */
+/* line 246, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-navigate-container {
   padding-left: 10px !important;
   flex: 1 !important;
   display: flex !important;
 }
-/* line 249, content.scss */
+/* line 252, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-container {
   float: right !important;
   padding-top: 2px !important;
 }
-/* line 252, content.scss */
+/* line 255, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-container > label {
   top: -8px !important;
 }
-/* line 257, content.scss */
+/* line 260, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle {
   position: relative !important;
   width: 70px !important;
@@ -259,27 +260,27 @@ input[id^=page-ruler][type=number]::-webkit-inner-spin-button:after {
   -webkit-user-select: none !important;
   user-select: none !important;
 }
-/* line 261, content.scss */
+/* line 264, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle.lang_pt {
   width: 110px !important;
 }
-/* line 264, content.scss */
+/* line 267, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle.lang_es {
   width: 125px !important;
 }
-/* line 270, content.scss */
+/* line 273, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle input {
   display: none !important;
 }
-/* line 275, content.scss */
+/* line 278, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle input:checked + label .page-ruler-inner {
   margin-left: 0 !important;
 }
-/* line 278, content.scss */
+/* line 281, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle input:checked + label .page-ruler-switch {
   right: 0px !important;
 }
-/* line 285, content.scss */
+/* line 288, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label {
   display: block !important;
   overflow: hidden !important;
@@ -292,11 +293,11 @@ input[id^=page-ruler][type=number]::-webkit-inner-spin-button:after {
   height: 26px !important;
   z-index: 1 !important;
 }
-/* line 296, content.scss */
+/* line 299, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label .page-ruler-inner, #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label .page-ruler-switch {
   cursor: pointer !important;
 }
-/* line 300, content.scss */
+/* line 303, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label .page-ruler-inner {
   width: 200% !important;
   margin-left: -100% !important;
@@ -304,7 +305,7 @@ input[id^=page-ruler][type=number]::-webkit-inner-spin-button:after {
   -webkit-transition-delay: 0s;
   transition: margin 0.3s ease-in 0s !important;
 }
-/* line 304, content.scss */
+/* line 307, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label .page-ruler-inner:after, #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label .page-ruler-inner:before {
   float: left !important;
   width: 50% !important;
@@ -318,7 +319,7 @@ input[id^=page-ruler][type=number]::-webkit-inner-spin-button:after {
   -webkit-box-sizing: border-box !important;
   box-sizing: border-box !important;
 }
-/* line 316, content.scss */
+/* line 319, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label .page-ruler-inner:before {
   content: "__MSG_elementToolbarToggleOn__" !important;
   text-transform: uppercase !important;
@@ -326,7 +327,7 @@ input[id^=page-ruler][type=number]::-webkit-inner-spin-button:after {
   background-color: #3f79c2 !important;
   color: #ffffff !important;
 }
-/* line 323, content.scss */
+/* line 326, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label .page-ruler-inner:after {
   content: "__MSG_elementToolbarToggleOff__" !important;
   text-transform: uppercase !important;
@@ -335,7 +336,7 @@ input[id^=page-ruler][type=number]::-webkit-inner-spin-button:after {
   color: #999999 !important;
   text-align: right !important;
 }
-/* line 333, content.scss */
+/* line 336, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label .page-ruler-switch {
   width: 16px !important;
   margin: 3px !important;
@@ -351,16 +352,16 @@ input[id^=page-ruler][type=number]::-webkit-inner-spin-button:after {
   -webkit-transition-delay: 0s;
   transition: all 0.3s ease-in 0s !important;
 }
-/* line 345, content.scss */
+/* line 348, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label .page-ruler-switch.lang_pt {
   right: 80px !important;
 }
-/* line 348, content.scss */
+/* line 351, content.scss */
 #page-ruler-element-toolbar #page-ruler-element-toolbar-tracking-mode-toggle label .page-ruler-switch.lang_pt {
   right: 95px !important;
 }
 
-/* line 361, content.scss */
+/* line 364, content.scss */
 #page-ruler-mask {
   width: 100% !important;
   height: 100% !important;
@@ -371,14 +372,14 @@ input[id^=page-ruler][type=number]::-webkit-inner-spin-button:after {
   cursor: crosshair !important;
 }
 
-/* line 372, content.scss */
+/* line 375, content.scss */
 #page-ruler {
   position: absolute !important;
   z-index: 2000005 !important;
   border-width: 1px !important;
   border-style: dashed !important;
 }
-/* line 378, content.scss */
+/* line 381, content.scss */
 #page-ruler .page-ruler-container {
   position: relative !important;
   width: 100% !important;
@@ -386,7 +387,7 @@ input[id^=page-ruler][type=number]::-webkit-inner-spin-button:after {
   cursor: move !important;
   overflow: hidden !important;
 }
-/* line 385, content.scss */
+/* line 388, content.scss */
 #page-ruler .page-ruler-container .page-ruler-corner {
   position: absolute !important;
   width: 16px !important;
@@ -394,11 +395,11 @@ input[id^=page-ruler][type=number]::-webkit-inner-spin-button:after {
   border-width: 1px !important;
   border-style: dashed !important;
 }
-/* line 393, content.scss */
+/* line 396, content.scss */
 #page-ruler .page-ruler-container .page-ruler-edge {
   position: absolute !important;
 }
-/* line 397, content.scss */
+/* line 400, content.scss */
 #page-ruler .page-ruler-container .page-ruler-top {
   top: 0px !important;
   left: 0px !important;
@@ -406,7 +407,7 @@ input[id^=page-ruler][type=number]::-webkit-inner-spin-button:after {
   width: 100% !important;
   cursor: n-resize !important;
 }
-/* line 405, content.scss */
+/* line 408, content.scss */
 #page-ruler .page-ruler-container .page-ruler-bottom {
   bottom: 0px !important;
   left: 0px !important;
@@ -414,7 +415,7 @@ input[id^=page-ruler][type=number]::-webkit-inner-spin-button:after {
   width: 100% !important;
   cursor: n-resize !important;
 }
-/* line 413, content.scss */
+/* line 416, content.scss */
 #page-ruler .page-ruler-container .page-ruler-left {
   top: 0px !important;
   left: 0px !important;
@@ -422,7 +423,7 @@ input[id^=page-ruler][type=number]::-webkit-inner-spin-button:after {
   width: 8px !important;
   cursor: w-resize !important;
 }
-/* line 421, content.scss */
+/* line 424, content.scss */
 #page-ruler .page-ruler-container .page-ruler-right {
   top: 0px !important;
   right: 0px !important;
@@ -430,7 +431,7 @@ input[id^=page-ruler][type=number]::-webkit-inner-spin-button:after {
   width: 8px !important;
   cursor: w-resize !important;
 }
-/* line 429, content.scss */
+/* line 432, content.scss */
 #page-ruler .page-ruler-container .page-ruler-top-left {
   top: 0px !important;
   left: 0px !important;
@@ -438,7 +439,7 @@ input[id^=page-ruler][type=number]::-webkit-inner-spin-button:after {
   border-top: none !important;
   cursor: nw-resize !important;
 }
-/* line 437, content.scss */
+/* line 440, content.scss */
 #page-ruler .page-ruler-container .page-ruler-top-right {
   top: 0px !important;
   right: 0px !important;
@@ -446,7 +447,7 @@ input[id^=page-ruler][type=number]::-webkit-inner-spin-button:after {
   border-top: none !important;
   cursor: ne-resize !important;
 }
-/* line 445, content.scss */
+/* line 448, content.scss */
 #page-ruler .page-ruler-container .page-ruler-bottom-left {
   bottom: 0px !important;
   left: 0px !important;
@@ -454,7 +455,7 @@ input[id^=page-ruler][type=number]::-webkit-inner-spin-button:after {
   border-bottom: none !important;
   cursor: sw-resize !important;
 }
-/* line 453, content.scss */
+/* line 456, content.scss */
 #page-ruler .page-ruler-container .page-ruler-bottom-right {
   bottom: 0px !important;
   right: 0px !important;
@@ -462,11 +463,11 @@ input[id^=page-ruler][type=number]::-webkit-inner-spin-button:after {
   border-bottom: none !important;
   cursor: se-resize !important;
 }
-/* line 464, content.scss */
+/* line 467, content.scss */
 #page-ruler.page-ruler-tracking .page-ruler-container {
   cursor: pointer !important;
 }
-/* line 466, content.scss */
+/* line 469, content.scss */
 #page-ruler.page-ruler-tracking .page-ruler-container .page-ruler-edge, #page-ruler.page-ruler-tracking .page-ruler-container .page-ruler-corner {
   cursor: pointer !important;
 }

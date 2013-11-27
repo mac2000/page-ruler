@@ -50,7 +50,7 @@ input {
 			@include appearance(checkbox !important);
 		}
 		&[type=number] {
-			&::-webkit-inner-spin-button {
+			&::-webkit-inner-spin-button, &::-webkit-outer-spin-button {
 				-webkit-appearance:	none !important;
 				cursor:				pointer !important;
 				display:			block !important;
@@ -59,14 +59,17 @@ input {
 				text-align:			center !important;
 				position:			relative !important;
 				background-color:	#ccc !important;
+				height:				21px !important;
 			}
 
-			&::-webkit-inner-spin-button:hover {
+			&::-webkit-inner-spin-button:hover, &::-webkit-outer-spin-button:hover {
 				color:	$toolbar-color !important;
 			}
 
 			&::-webkit-inner-spin-button:before,
-			&::-webkit-inner-spin-button:after {
+			&::-webkit-inner-spin-button:after,
+			&::-webkit-outer-spin-button:before,
+			&::-webkit-outer-spin-button:after {
 				content:		"^" !important;
 				position:		absolute !important;
 				right:			0 !important;
@@ -75,12 +78,12 @@ input {
 				right:			1px !important;
 			}
 
-			&::-webkit-inner-spin-button:before {
-				top:	-1px !important;
+			&::-webkit-inner-spin-button:before, &::-webkit-outer-spin-button:before {
+				top:	-2px !important;
 			}
 
-			&::-webkit-inner-spin-button:after {
-				bottom:				-5px !important;
+			&::-webkit-inner-spin-button:after, &::-webkit-outer-spin-button:after {
+				bottom:				-2px !important;
 				-webkit-transform:	rotate(180deg) !important;
 			}
 		}
