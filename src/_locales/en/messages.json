@@ -211,6 +211,13 @@
 	"optionsHideUpdateTabHelp": {
 		"message": "Do not show the update tab whenever a new version of the extension is installed",
 		"description": "Message explaining how the do not show update tab checkbox is used"
+	},
+
+	// version 2.0.4
+
+	"updateTip": {
+		"message": "Tip: Use the Ctrl+M (Command+M on Mac) shortcut to enable and disable Page Ruler, or assign a different shortcut from the Keyboard Shortcuts section in the Extensions Page",
+		"description": "Message informing users about the shortcut key"
 	}
 
 }

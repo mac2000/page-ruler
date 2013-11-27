@@ -264,7 +264,9 @@ chrome.runtime.onInstalled.addListener(function(details) {
 	}
 });
 
-// messages
+/*
+ * Messages
+ */
 chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
 
 	// get tab id
@@ -376,4 +378,11 @@ chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
 
 	return true;
 
+});
+
+/*
+ * Commands
+ */
+chrome.commands.onCommand.addListener(function(command) {
+	console.log('Command:', command);
 });

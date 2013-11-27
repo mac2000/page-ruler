@@ -71,6 +71,11 @@ ul.updates li {
     margin-bottom: 10px;
 }
 
+.box.tip {
+	border-color: #3FC254;
+	background-color: #D6F7DE;
+}
+
 .box h3 {
     margin-top: 0px;
 }
