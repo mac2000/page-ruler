@@ -12,7 +12,7 @@
 
 	"extDescription": {
 		"message": "Draw a ruler to get pixel dimensions and positioning, and measure elements on any web page.",
-		"description": "Extension description"
+		"description": "Extension description (maximum 132 characters)"
 	},
 
 	"toolbarWidth": {
