@@ -136,7 +136,7 @@
                 "description": "Message d'entête de la page qui contient le numéro de la nouvelle version",
                 "placeholders": {
                         "version": {
-                                "contient": "$1",
+                                "content": "$1",
                                 "exemple": "2.0.1"
                         }
                 }

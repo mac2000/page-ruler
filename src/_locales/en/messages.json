@@ -216,7 +216,7 @@
 	// version 2.0.4
 
 	"updateTip": {
-		"message": "Tip: Use the Ctrl+M (Command+M on Mac) shortcut to enable and disable Page Ruler, or assign a different shortcut from the Keyboard Shortcuts section in the Extensions Page",
+		"message": "Tip: Use the Alt+P shortcut to enable and disable Page Ruler, or assign a different shortcut from the Keyboard Shortcuts section in the Extensions tab",
 		"description": "Message informing users about the shortcut key"
 	}
 
