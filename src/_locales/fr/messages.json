@@ -11,7 +11,7 @@
         },
 
         "extDescription": {                
-                "message": "Dessine une règle pour mesurer les dimensions en pixels ainsi que les positions, et mesure aussi les éléments de n'importe quelle page web.",
+                "message": "Dessine une règle pour mesurer les dimensions ainsi que les positions, et mesure aussi les éléments de n'importe quelle page web.",
                 "description": "Description de l'extension"
         },
 
