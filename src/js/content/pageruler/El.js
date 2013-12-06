@@ -226,11 +226,15 @@ pr.El = {
 		var boundingRect	= el.getBoundingClientRect();
 		var left			= boundingRect.left || 0;
 
-		// calculate body top offset
-		// we will subtract this from the left value in case of margins pushing it out
-		var bodyOffset		= document.body.getBoundingClientRect().left;
+		// calculate document offset left
+		// element box left + document offset left = true element top position
+		var documentOffsetLeft = document.body.ownerDocument.defaultView.pageXOffset;
 
-		return left - bodyOffset;
+		// get page offset
+		// this includes left margin
+		var offsetLeft = pr.Dimensions.offsetLeft();
+
+		return left + documentOffsetLeft - offsetLeft;
 		
 	},
 	
@@ -245,11 +249,15 @@ pr.El = {
 		var boundingRect	= el.getBoundingClientRect();
 		var top				= boundingRect.top || 0;
 
-		// calculate body top offset
-		// we will subtract this from the top value due to the toolbar pushing it down
-		var bodyOffset		= document.body.getBoundingClientRect().top;
+		// calculate document offset top body top offset
+		// element box top + document offset top = true element top position
+		var documentOffsetTop = document.body.ownerDocument.defaultView.pageYOffset;
 
-		return top - bodyOffset;
+		// get page offset
+		// this includes top margin and ruler height
+		var offsetTop = pr.Dimensions.offsetTop();
+
+		return top + documentOffsetTop - offsetTop;
 		
 	},
 

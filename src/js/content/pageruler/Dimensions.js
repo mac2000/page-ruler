@@ -31,6 +31,36 @@ pr.Dimensions = {
 	pageBottom:	document.body.scrollHeight,
 
 	/**
+	 * Return the amount the page top has been offset by top margin and the pageruler toolbar
+	 * @return Number
+	 */
+	offsetTop:	function() {
+
+		var pageOffset = document.body.scrollHeight - document.documentElement.scrollHeight;
+
+		var toolbarHeight = pr.elements.toolbar.height;
+
+		// also reduce by element toolbar height if enabled
+		if (pr.elements.toolbar.elementMode) {
+			toolbarHeight += pr.elements.toolbar.elementToolbar.height;
+		}
+
+		return pageOffset + toolbarHeight;
+
+	},
+
+	/**
+	 * Return the amount the page left has been offset by left margin
+	 * @type Number
+	 */
+	offsetLeft:	function() {
+
+		// @todo This needs fixing for when the page has horizontal scroll
+		return document.body.getBoundingClientRect().left;
+
+	},
+
+	/**
 	 * Array of callbacks to apply when the dimensions are updated
 	 */
 	updateCallbacks:	[],

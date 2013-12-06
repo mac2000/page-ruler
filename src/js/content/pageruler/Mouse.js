@@ -21,17 +21,13 @@ pr.Mouse = {
 		// if applying offset
         if (!noOffset) {
 
-			var toolbarHeight = pr.elements.toolbar.height;
+			// get offset value and reduce x
+			var offsetX = pr.Dimensions.offsetLeft();
+			x -= offsetX;
 
-			// also reduce by element toolbar height if enabled
-			if (pr.elements.toolbar.elementMode) {
-				toolbarHeight += pr.elements.toolbar.elementToolbar.height;
-			}
-
-			var bodyOffset = document.body.getBoundingClientRect().top;
-
-			// reduce y by toolbar height
-            y -= bodyOffset;
+			// get offset value and reduce y
+			var offsetY = pr.Dimensions.offsetTop();
+			y -= offsetY;
 
         }
 		
